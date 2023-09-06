@@ -1,8 +1,15 @@
-var express = require('express');
+import express from 'express'
+
 var router = express.Router();
 
-router.get("/cadastrarUsuario", (req,res) => {
-   res.redirect("/cadastro-usuario")
-})
+//Sempre que tivermos uma variável não utilizada como parametro, usamos o _ para deixar isso implícito
+router.get("/", (_, res) => {
+   res.redirect("/home");
+});
 
- module.exports = router;
+//Não entendi o intuito dessa rota, até porque ela não faz nada, pode tranquilamente ser removida
+/*router.get("/cadastrarUsuario", (_, res) => {
+   res.redirect("/cadastro-usuario")
+})*/
+
+ export default router
