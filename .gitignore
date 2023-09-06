@@ -1,0 +1,5 @@
+#Dados de cache e dependências não devem ser enviadas ao github
+#Pesam o projeto desnecessariamente
+
+package-lock.json
+node_modules
