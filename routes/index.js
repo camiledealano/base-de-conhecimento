@@ -7,9 +7,4 @@ router.get("/", (_, res) => {
    res.redirect("/home");
 });
 
-//Não entendi o intuito dessa rota, até porque ela não faz nada, pode tranquilamente ser removida
-/*router.get("/cadastrarUsuario", (_, res) => {
-   res.redirect("/cadastro-usuario")
-})*/
-
  export default router

@@ -11,16 +11,15 @@
     <script src="/controllers/HomeController.js"></script>
   </head>
   <body>
-
     <nav class="py-2 bg-body-tertiary border-bottom">
         <div class="container d-flex flex-wrap">
           <ul class="nav me-auto">
-            <li class="nav-item"><a href="#artigos" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Artigos destaques</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Artigos mais curtidos</a></li>
+            <li class="nav-item"><button onclick="openHomePage" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Destaques</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Mais curtidos</a></li>
           </ul>
           <ul class="nav">
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Login</a></li>
+            <li class="nav-item"><button onclick="openLoginRegister()" class="nav-link link-body-emphasis px-2">Login</button></li>
             <li class="nav-item"><button onclick="openUserRegister()" class="nav-link link-body-emphasis px-2">Cadastrar-se</button></li>
           </ul>
         </div>

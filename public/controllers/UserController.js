@@ -1,3 +1,3 @@
-function teste() {
-	console.log('testado')
+function openHomePage() {
+    window.location.href = "/home";
 }
