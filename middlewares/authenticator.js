@@ -1,16 +1,15 @@
-//  const express = require('express');
-//  const bodyParser =  require('body-parser');
-//  const session = require('express-session');
-//  const path = require('path');
- 
-//  const app = express();
+function authenticate(req, res, next) {
+    const { username, password } = req.body;
 
-//  app.use(bodyParser.urlencoded({extended: false}));
-//  app.use(session({
-//     secret: '1234',
-//     resave: false,
-//     saveUninitialized: true
-//  }));
+    if (username === 'admin' && password === '1234') {
+        req.session.user = 'root';
+        res.status(200).send("Autenticado com sucesso!")
+        next();
+    } else {
+        res.status(401).send('Autenticação falhou');
+    }
+}
+
 
 //  const isAutenticado = (req, res, next) => {
 //     const isAuth = req.session.user === 'root';
@@ -20,22 +19,7 @@
 //     next();
 //  }
 
-//  app.use(express.static(path.join(__dirname, 'public')));
-
-//  app.get("/login.html", (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'login.html'));
-//  });
-
-//  app.post('/login', (req,res) => {
-//     const {username, password} = req.body;
-
-//     if (username === 'root' && password === '1234') {
-//         req.session.user = 'root'
-//         res.redirect('pagina de sucesso');
-//     } else {
-//         res.redirect('pagina de login')
-//     }
-//  })
+//fazer outro middleware pra verificar se ta autenticado ou n
 
 //  app.get('/sucesso.html', isAutenticado, (req, res) => {
 //     res.sendFile(path.join(__dirname, 'public', 'sucesso.html'));
@@ -50,6 +34,6 @@
 // res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 // });
 
-// app.listen(9000, () => {
-// console.log(`Aplicação rodando em http://localhost:9000 !`);
-// });
+
+
+export default authenticate

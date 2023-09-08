@@ -7,4 +7,5 @@ router.get("/", (_, res) => {
    res.redirect("/home");
 });
 
- export default router
+
+export default router

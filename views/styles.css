@@ -1,0 +1,60 @@
+:root {
+    --primary: rgb(124, 17, 185);
+    --secondary: rgb(252, 252, 252);
+}
+
+@media (max-width: 768px) {
+    .user-login {
+        /*Camile: fazer o responsivo depois */
+    }
+}
+
+.background-color {
+    background-image: url(./assets/background-login.jpg);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.user-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 27%;
+    max-width: 30%;
+    height: 56%;
+    background-color: var(--secondary);
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 7px 7px 1px rgba(70, 69, 69, 0.5);
+    border-radius: 40px;
+}
+
+.login-container {
+    width: 60%;
+}
+
+.login-container .form-floating input {
+    min-height: 48px!important;
+}
+
+.login-container .form-floating label {
+    font-size: 14px;
+}
+
+.new-user {
+    font-size: 14px;
+    position: absolute;
+    bottom: 10;
+}
+
+.new-user a {
+    color: rgb(124, 17, 185);
+}
+
+.new-user a:hover {
+    color: rgb(43, 136, 100);
+}
