@@ -17,7 +17,6 @@ function validateInputsLogin() {
         password: document.querySelector('#input-senha').value
     };
 
-    console.log(requestBody)
     fetch("http://localhost:9000/login", {
         method: 'POST',
         body: JSON.stringify(requestBody),
