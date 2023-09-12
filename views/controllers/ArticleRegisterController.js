@@ -1,4 +1,3 @@
-import objectHash from "object-hash";
 function cadastrarArtigo() {
     let titulo = document.querySelector('#input-titulo').value;
     let corpo = document.querySelector('#textarea-corpo').value;
@@ -6,10 +5,8 @@ function cadastrarArtigo() {
     let emailAutor = document.querySelector('#input-email-autor').value;
     let dataPublicacao = document.querySelector('#input-data').value;
 
-    let idHash = objectHash.sha1(titulo + corpo + palavrasChave + emailAutor + dataPublicacao);
-
     const dadosArtigo = {
-        "kb_id": idHash,
+        "kb_id": "",
         "kb_title": titulo,
         "kb_body": corpo,
         "kb_permalink": "",
@@ -22,6 +19,15 @@ function cadastrarArtigo() {
         "kb_published_date": dataPublicacao
       };
 
-    console.log(JSON.stringify(dadosArtigo));
-
+    fetch("http://localhost:9000/cadastrar-artigo", {
+        method: 'POST',
+        body: JSON.stringify(dadosArtigo),
+        headers: {
+          'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      if (response.status === 200) {
+          //redireciona pra algum lugar
+      }
+    })
 }

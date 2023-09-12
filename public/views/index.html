@@ -9,17 +9,18 @@
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <!-- Rota no qual serve nossos controllers estáticos (note que não é o caminho relativo como "./controllers") -->
     <script src="/controllers/HomeController.js"></script>
+    <link rel="icon" href="/views/assets/icon.png" type="image/png"> 
   </head>
   <body>
     <nav class="py-2 bg-body-tertiary border-bottom">
         <div class="container d-flex flex-wrap">
           <ul class="nav me-auto">
-            <li class="nav-item"><button onclick="openArticleRegister()" class="nav-link link-body-emphasis px-2">Escrever artigo</button></li>
-            <li class="nav-item"><button class="nav-link link-body-emphasis px-2">Mais curtidos</button></li>
+            <li class="nav-item"><a href="/cadastro-artigo" class="nav-link link-body-emphasis px-2">Escrever artigo</a></li>
+            <li class="nav-item"><a href="" class="nav-link link-body-emphasis px-2">Mais curtidos</a></li>
           </ul>
           <ul class="nav">
-            <li class="nav-item"><button onclick="openLoginPage()" class="nav-link link-body-emphasis px-2">Login</button></li>
-            <li class="nav-item"><button onclick="openUserRegister()" class="nav-link link-body-emphasis px-2">Cadastrar-se</button></li>
+            <li class="nav-item"><a href="/login" class="nav-link link-body-emphasis px-2">Login</a></li>
+            <li class="nav-item"><a href="/cadastro-usuario" class="nav-link link-body-emphasis px-2">Cadastrar-se</a></li>
           </ul>
         </div>
     </nav>
@@ -27,7 +28,6 @@
     <header class="py-3 mb-4 border-bottom">
         <div class="container d-flex flex-wrap justify-content-center">
           <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-            <!-- colocar o icone do img aqui-->
             <span class="fs-4">BC - Base de Conhecimento</span>
           </a>
           <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">

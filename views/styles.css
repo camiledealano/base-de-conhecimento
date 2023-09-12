@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Nunito+Sans:ital,opsz@0,6..12;1,6..12&display=swap');
+
 :root {
     --primary: rgb(124, 17, 185);
     --secondary: rgb(252, 252, 252);
+    --primary-light: rgb(230, 202, 247);
 }
 
 body {
@@ -55,7 +58,7 @@ body {
 }
 
 .new-user a {
-    color: rgb(124, 17, 185);
+    color: var(--primary);
 }
 
 .new-user a:hover {
@@ -68,9 +71,20 @@ body {
     align-items: center;
     justify-content: center;
     padding: 30px;
-    background-color: #e6e4e4;
+    background-color: var(--primary-light);
     width: 95%;
     margin: auto;
-    border-radius: 20px;
-    
+    border-radius: 20px;   
+}
+
+.new-article h2 {
+    color: #333 ;
+}
+
+.new-article h2, label {
+    font-family: 'Grandstander', cursive;
+}
+
+.btn-cadastrar-artigo {
+    margin-top: 2%;
 }
