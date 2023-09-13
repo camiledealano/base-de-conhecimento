@@ -1,36 +1,46 @@
-// RODAR COM npx nodemon app.js para rodar nodemon
-import express from 'express'
-import routes from './routes/index.js'
-import bodyParser from 'body-parser';
-import session from 'express-session';
-import authenticator from './middlewares/authenticator.js';
-import objectHash from 'object-hash';
-import fs from 'fs';
+// Modulos
+const express = require('express');
+const bodyParser = require('body-parser');
+const users = require('./routes/users');
+const authenticator = require('./middlewares/authenticator');
+const session = require('express-session');
 
-const app = express();
+// Configuracoes
+  const app = express();
 
-app.use(routes);
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.json());
-app.use(session({
-   secret: '1234',
-   resave: false,
-   saveUninitialized: true
-}));
+  app.set('view engine', 'ejs');
+  app.use(bodyParser.urlencoded({extended: false}));
+  app.use(express.json());
+
+  // Sessão
+  app.use(session({
+    secret: '1234',
+    resave: false,
+    saveUninitialized: true
+  }));
+
+  //Middleware
+
+
+// Rotas
+app.use('/users', users);
+
+app.get('/cadastro-usuario', (req, res) => {
+  res.render('users_create'); // nome do arquivo EJS (sem a extensão .ejs)
+});
+
+app.get('/home', (req, res) => {
+  res.render('index'); 
+});
+
+
 
 app.use('/controllers', express.static('./public/controllers'));
 app.use('/controllers-views', express.static('./views/controllers'));
-
-
 app.use('/views', express.static('./views'));
-app.use('/home', express.static('./public/views/index.html'));
-app.use('/cadastro-usuario', express.static('./public/views/cadastroUsuario.html'));
+
 app.use('/login', express.static('./public/views/login.html'));
 app.use('/cadastro-artigo', express.static('./views/views/cadastro-artigo.html'));
-
-app.listen(9000, () => {
-    console.log("Aplicação rodando em http://localhost:9000!");
-});
 
 app.post('/login', authenticator);
 
@@ -56,3 +66,8 @@ app.post("/cadastrar-artigo", (req,res) => {
 });
 
 
+// Outros
+
+app.listen(9000, () => {
+    console.log("Aplicação rodando em http://localhost:9000");
+});

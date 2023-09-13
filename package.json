@@ -2,9 +2,9 @@
   "name": "base-de-conhecimento",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,14 +18,17 @@
   },
   "homepage": "https://github.com/camiledealano/base-de-conhecimento#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "fs": "^0.0.1-security",
     "object-hash": "^3.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
-  "type": "module"
+    "nodemon": "^3.0.1",
+    "readline-sync": "^1.4.10",
+    "request": "^2.88.2"
+  }
 }
