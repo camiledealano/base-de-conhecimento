@@ -9,27 +9,19 @@
     <link rel="stylesheet" href="/views/styles.css">
     <link rel="icon" href="/views/assets/icon.png" type="image/png"> 
 </head>
-<body class="container background-color">
-    <form class="user-login" action="/login/autenticar" method="POST" enctype="application/x-www-form-urlencoded">
-        <h2>Faça login</h2>
-        <div class="login-container">
-            <div class="form-floating mb-3">
-                <input id="input-usuario" type="text" class="form-control" placeholder="Usuário">
-                <label for="input-usuario">Usuário</label>
-                <div class="invalid-feedback">Este campo é obrigatório.</div>
-            </div>
-            <div class="form-floating">
-                <input id="input-senha" type="password" class="form-control" placeholder="Senha">
-                <label for="input-senha">Senha</label>
-                <div class="invalid-feedback">Este campo é obrigatório.</div>
-            </div>
+<body class="container d-flex justify-content-center align-items-center background-color" style="min-height: 100vh;">
+    <form class="form text-center justify-content-center" action="/login/autenticar" method="POST" enctype="application/x-www-form-urlencoded">
+        <p class="form-title">Entre na sua conta</p>
+        <div class="input-container">
+           <input name="email" placeholder="Digite seu e-mail" type="text">
         </div>
-        <div class="mt-2">
-            <button class="btn btn-success">Acessar</button>
+       <div class="input-container">
+           <input name="senha" placeholder="Digite sua senha" type="password">
         </div>
-        <span class="new-user mt-2">Novo por aqui?
-            <a href="/cadastro-usuario">Cadastre-se agora!</a>
-        </span>
+        <button class="submit" type="submit">Entrar</button>
+        <p class="signup-link"> Ainda não possui conta?
+         <a href="/cadastro-usuario">Cadastre-se agora</a>
+       </p>
     </form>
 </body>
 </html>    

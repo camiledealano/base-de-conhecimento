@@ -1,16 +1,14 @@
 function authenticate(req, res, next) {
-    const { username, password } = req.body;
-    console.log(req);
+    const { email, senha } = req.body;
 
-    // if (username === 'admin' && password === '1234') {
-    //     req.session.user = 'root';
-    //     res.status(200).send("Autenticado com sucesso!")
-    //     next();
-    // } else {
-    //     res.status(401).send('Autenticação falhou');
-    // }
+    if (email === 'admin' && senha === '1234') {
+        req.session.user = 'root';
+        res.redirect('/home');
+        next();
+    } else {
+        res.redirect('/login');
+    }
 }
-
 
 //  const isAutenticado = (req, res, next) => {
 //     const isAuth = req.session.user === 'root';

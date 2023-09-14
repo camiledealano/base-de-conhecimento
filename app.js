@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const users = require('./routes/users');
+const articles = require('./routes/articles');
 const authenticator = require('./middlewares/authenticator');
 const session = require('express-session');
 
@@ -27,6 +28,10 @@ app.post('/login/autenticar', authenticator);
 // Rotas
 app.use('/users', users);
 
+app.use('/article', articles);
+
+// Renderizar páginas
+
 app.get('/cadastro-usuario', (_, res) => {
   res.render('users_create');
 });
@@ -42,34 +47,6 @@ app.get('/home', (_, res) => {
 app.get('/cadastro-artigo', (_, res) => {
   res.render('article_create');
 })
-
-
-// app.use('/controllers-views', express.static('./views/controllers'));
-
-// app.use('/login', express.static('./public/views/login.html'));
-
-
-// app.post("/cadastrar-artigo", (req,res) => {
-//     const novoArtigo = req.body;
-//     novoArtigo.kb_id = objectHash(novoArtigo);
-
-//     let filePath = "./data/articles.json";
-//     let artigos = [];
-
-//     if (fs.existsSync(filePath)) {
-//         const conteudo = fs.readFileSync(filePath, 'utf-8');
-//         if (conteudo.trim() !== "") {
-//             artigos = JSON.parse(conteudo);
-//         }
-//     }
-
-//     artigos.push(novoArtigo);
-
-//     fs.writeFileSync(filePath, JSON.stringify(artigos, null, 2), { encoding: "utf-8" });
-
-//     res.json({ message: "Artigo cadastrado com sucesso" });
-// });
-
 
 // Porta onde roda a aplicação
 app.listen(9000, () => {

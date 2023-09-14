@@ -1,34 +1,50 @@
 <%- include('header'); -%>
-
 <main class="container new-article">
   <h2>Cadastre um artigo</h2>
-  <form class="row g-3">
+  <form class="row g-3" action="/article/cadastrar-artigo" method="POST" enctype="application/x-www-form-urlencoded">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+  </div>
     <div class="col-md-12">
-      <label for="input-titulo" class="form-label">Título</label>
-      <input type="text" class="form-control" id="input-titulo">
+      <label for="title" class="form-label">Título</label>
+      <input type="text" class="form-control" name="title">
     </div>
     <div class="col-md-12">
-      <label for="textarea-corpo" class="form-label">Corpo do texto</label>
-      <textarea class="form-control" id="textarea-corpo" style="height: 200px;"></textarea>
+      <label for="body" class="form-label">Corpo do texto</label>
+      <textarea class="form-control" name="body" style="height: 200px;"></textarea>
     </div>
     <div class="col-12">
-      <label for="input-palavras-chave" class="form-label">Palavras-chave</label>
-      <input type="text" class="form-control" id="input-palavras-chave">
+      <label for="keywords" class="form-label">Palavras-chave</label>
+      <input type="text" class="form-control" name="keywords">
     </div>
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-6">
-          <label for="input-email-autor" class="form-label">E-mail do autor</label>
-          <input type="text" class="form-control" id="input-email-autor">              
+          <label for="author_name" class="form-label">E-mail do autor</label>
+          <input type="text" class="form-control" name="author_name">              
         </div>
         <div class="col-md-6">
-          <label for="input-data" class="form-label">Data de publicação</label>
-          <input type="text" class="form-control" id="input-data">              
+          <label for="published_date" class="form-label">Data de publicação</label>
+          <input type="text" class="form-control" name="published_date">              
         </div>
       </div>
     </div>
     <div class="text-center btn-cadastrar-artigo">
-      <button type="submit" class="btn btn-success" style="width: 200px;" onclick="cadastrarArtigo()">Cadastrar</button>
+      <button type="submit" class="btn btn-success" style="width: 200px;">Cadastrar</button>
     </div>
   </form>
 </main>
