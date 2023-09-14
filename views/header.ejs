@@ -8,9 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"  async></script>
-    <!-- Rota no qual serve nossos controllers estáticos (note que não é o caminho relativo como "./controllers") -->
-    <!-- ^^^^^ Crissiano explain - Não precisa, é so colocar o Href = "/rota" -->
-    <script src="../public/controllers/UserController.js"></script>
+    <link rel="stylesheet" href="/views/styles.css">
+    <link rel="icon" href="/views/assets/icon.png" type="image/png"> 
+    
+    <script src="../public/controllers/HomeController.js"></script>
 </head>
 
 <body>
@@ -18,11 +19,11 @@
         <div class="container d-flex flex-wrap">
           <ul class="nav me-auto">
             <li class="nav-item"><a href="/home" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="/cadastro-artigo" class="nav-link link-body-emphasis px-2">Escrever artigo</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Destaques</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Mais curtidos</a></li>
           </ul>
           <ul class="nav">
-            <li class="nav-item"><button onclick="openLoginPage()" class="nav-link link-body-emphasis px-2">Login</button></li>
+            <li class="nav-item"><a href="/login" class="nav-link link-body-emphasis px-2">Login</a></li>
             <li class="nav-item"><a href="/cadastro-usuario" class="nav-link link-body-emphasis px-2">Cadastrar-se</a></li>
           </ul>
         </div>

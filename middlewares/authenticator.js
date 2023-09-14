@@ -1,13 +1,14 @@
 function authenticate(req, res, next) {
     const { username, password } = req.body;
+    console.log(req);
 
-    if (username === 'admin' && password === '1234') {
-        req.session.user = 'root';
-        res.status(200).send("Autenticado com sucesso!")
-        next();
-    } else {
-        res.status(401).send('Autenticação falhou');
-    }
+    // if (username === 'admin' && password === '1234') {
+    //     req.session.user = 'root';
+    //     res.status(200).send("Autenticado com sucesso!")
+    //     next();
+    // } else {
+    //     res.status(401).send('Autenticação falhou');
+    // }
 }
 
 

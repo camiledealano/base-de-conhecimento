@@ -1,0 +1,34 @@
+<%- include('header'); -%>
+
+<main class="container new-article">
+  <h2>Cadastre um artigo</h2>
+  <form class="row g-3">
+    <div class="col-md-12">
+      <label for="input-titulo" class="form-label">Título</label>
+      <input type="text" class="form-control" id="input-titulo">
+    </div>
+    <div class="col-md-12">
+      <label for="textarea-corpo" class="form-label">Corpo do texto</label>
+      <textarea class="form-control" id="textarea-corpo" style="height: 200px;"></textarea>
+    </div>
+    <div class="col-12">
+      <label for="input-palavras-chave" class="form-label">Palavras-chave</label>
+      <input type="text" class="form-control" id="input-palavras-chave">
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="input-email-autor" class="form-label">E-mail do autor</label>
+          <input type="text" class="form-control" id="input-email-autor">              
+        </div>
+        <div class="col-md-6">
+          <label for="input-data" class="form-label">Data de publicação</label>
+          <input type="text" class="form-control" id="input-data">              
+        </div>
+      </div>
+    </div>
+    <div class="text-center btn-cadastrar-artigo">
+      <button type="submit" class="btn btn-success" style="width: 200px;" onclick="cadastrarArtigo()">Cadastrar</button>
+    </div>
+  </form>
+</main>
