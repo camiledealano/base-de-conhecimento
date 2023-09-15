@@ -5,6 +5,7 @@ const users = require('./routes/users');
 const articles = require('./routes/articles');
 const authenticator = require('./middlewares/authenticator');
 const session = require('express-session');
+const flash = require('connect-flash');
 
 // Configuracoes
 const app = express();
@@ -22,10 +23,18 @@ app.use(session({
   saveUninitialized: true
 }));
 
+app.use(flash());
+
 //Middlewares
-app.post('/login/autenticar', authenticator);
+app.use((req,res,next) =>{
+  res.locals.success_msg =  req.flash('success_msg')
+  res.locals.error_msg =  req.flash('error_msg')
+  next()
+});
 
 // Rotas
+app.post('/login/autenticar', authenticator);
+
 app.use('/users', users);
 
 app.use('/article', articles);
@@ -41,6 +50,10 @@ app.get('/login', (_, res) => {
 });
 
 app.get('/home', (_, res) => {
+  res.render('index'); 
+});
+
+app.get('/', (_, res) => {
   res.render('index'); 
 });
 

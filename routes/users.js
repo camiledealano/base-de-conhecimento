@@ -2,7 +2,6 @@ const fs = require('fs');
 const express = require('express');
 const router = express.Router();
 const UserModel = require('../models/UserModel'); 
-
 const usersFilePath = './data/users.json';
 
 // Rotas
@@ -11,13 +10,17 @@ router.post('/cadastrar', (req, res) => {
   const users = readUsers();
   users.push(newUser);
   writeUsers(users);
-  
-  res.json({ message: 'Usuário cadastrado com sucesso!', user: newUser });
+  req.flash('success_msg','Usuario criado com sucesso!');
+  res.render('users_create');
 });
 
 router.get('/Listar',  (req, res) => {
-  res.render('users_edit')
+  const users = readUsers();
+  res.render('users_edit', {
+    users: users
+  });
 });
+
 // Funcoes 
 
 const writeUsers = (users) => {
