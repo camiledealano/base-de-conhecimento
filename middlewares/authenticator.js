@@ -1,10 +1,27 @@
-function authenticate(req, res, next) {
-    const { email, senha } = req.body;
+const fs = require('fs');
+const objectHash = require('object-hash');
 
-    if (email === 'admin' && senha === '1234') {
+function authenticate(req, res, next) {
+    const user = req.body.user;
+    const password = req.body.password;
+    const dadosUsuario = JSON.parse(fs.readFileSync("./data/users.json", 'utf-8'));
+    let usuarioEncontrado = false;
+
+    for (let usuario of dadosUsuario) {
+        if (usuario.author_name === user && usuario.author_pwd === objectHash(password)) {
+            req.session.user = 'normal';
+            usuarioEncontrado = true;
+            break;
+        }
+    }
+
+    if (user === 'admin' && password === '1234') {
         req.session.user = 'root';
+        usuarioEncontrado = true; 
+    }
+
+    if (usuarioEncontrado) {
         res.redirect('/home');
-        next();
     } else {
         res.redirect('/login');
     }
