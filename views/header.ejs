@@ -9,34 +9,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"  async></script>
     <link rel="stylesheet" href="/views/styles.css">
-    <link rel="icon" href="/views/assets/icon.png" type="image/png"> 
+    <link rel="icon" href="/views/assets/icon.png" type="image/png">
+    <style>
+      .bg-light-purple {
+          background-color: #972ed9; /* Cor de fundo roxo claro */
+      }
+  </style>
 </head>
 
-<body>
-    <nav class="py-2 bg-body-tertiary border-bottom">
-        <div class="container d-flex flex-wrap">
-          <ul class="nav me-auto">
-            <li class="nav-item"><a href="/home" class="nav-link link-body-emphasis px-2 active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="/cadastro-artigo" class="nav-link link-body-emphasis px-2">Escrever artigo</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2">Destaques</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-light-purple">
+  <div class="container">
+      <a class="navbar-brand" href="/home">
+          <img src="/views/assets/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+          BC - Base de Conhecimento
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto justify-content-end"> <!-- Use justify-content-end para alinhar à direita -->
+              <li class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/cadastro-usuario">Cadastrar-se</a>
+              </li>
           </ul>
-          <ul class="nav">
-            <li class="nav-item"><a href="/login" class="nav-link link-body-emphasis px-2">Login</a></li>
-            <li class="nav-item"><a href="/cadastro-usuario" class="nav-link link-body-emphasis px-2">Cadastrar-se</a></li>
-          </ul>
-        </div>
-    </nav>
-
-    <header class="py-3 mb-4 border-bottom">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <a href="/home" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
-            <!-- colocar o icone do img aqui-->
-            <span class="fs-4">BC - Base de conhecimento</span>
-          </a>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
-            <input type="search" class="form-control" placeholder="Busque um artigo..." aria-label="Search">
-          </form>
-        </div>
-    </header>
+      </div>
+  </div>
+</nav>
 </body>
+
+
+<header class="py-3 mb-4 border-bottom">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div class="d-flex">
+          <a class="nav-link active me-3" href="/home">Home</a>
+          <a class="nav-link me-3" href="/cadastro-artigo">Escrever Artigo</a>
+          <a class="nav-link" href="#">Destaques</a>
+      </div>
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
+          <input type="search" class="form-control" placeholder="Busque um artigo..." aria-label="Search">
+      </form>
+  </div>
+</header>
+</body>
+
 </html>
+
