@@ -11,38 +11,7 @@ body {
 }
 
 .background-color {
-    background: linear-gradient(135deg, #852fd6 0%, #8f058f 20%, #9932CC 40%, #852fd6 60%, #8f058f 80%, #9932CC 100%);
-}
-
-.user-login {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 27%;
-    max-width: 30%;
-    height: 56%;
-    background-color: var(--secondary);
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 7px 7px 1px rgba(70, 69, 69, 0.5);
-    border-radius: 40px;
-}
-
-.login-container {
-    width: 60%;
-}
-
-.login-container .form-floating input {
-    min-height: 48px!important;
-}
-
-.login-container .form-floating label {
-    font-size: 14px;
+  background: linear-gradient(135deg, #0074E4 0%, #00A5E7 25%, #33B5E5 50%, #66C7E7 75%, #99D9E9 100%);
 }
 
 .new-user {
@@ -164,10 +133,8 @@ body {
 }
 
 .signup-link a {
-  color: #aa31aa;
   text-decoration: none;
 }
-
 
 .form {
 display: flex;

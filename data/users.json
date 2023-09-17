@@ -493,5 +493,14 @@
     "author_pwd": "$2b$10$93HPx1FoziclhG7CKhnNGOvPhU/aATi0CJHzdDQZRiFi8Tkb2QLa.",
     "author_level": "Escolher...",
     "author_status": "on"
+  },
+  {
+    "author_id": "133e5dcd4c7071ac135289ed24de2cbc9b88fae6207b7ffd3754032a7bd389ae",
+    "author_name": "teste",
+    "author_email": "asenhaehteste@a.com",
+    "author_user": "asenhaehteste",
+    "author_pwd": "e33ec1d8716c3ce7d3f79af04a09372ef9941edc",
+    "author_level": "normal",
+    "author_status": "on"
   }
 ]
