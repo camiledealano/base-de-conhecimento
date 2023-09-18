@@ -1,0 +1,50 @@
+<head>
+    <title>Artigos</title>
+</head>
+
+<%- include('header'); -%>
+
+<main>
+    <div style="width: 90%;margin: 0 auto;" >
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Corpo</th>
+                    <th scope="col">Palavras-Chave</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Data de Publicação</th>
+                    <th scope="col">Likes</th>
+                    <th></th>
+                </tr>
+            </thead>    
+            <tbody>
+                <% artigos.forEach(function(artigo) { %>
+                    <tr>
+                        <td><%= artigo.kb_id %></td>
+                        <td><%= artigo.kb_title %></td>
+                        <td class="text-truncate" style="max-width: 150px;"><%= artigo.kb_body %></td>
+                        <td><%= artigo.kb_keywords %></td>
+                        <td><%= artigo.kb_author_email %></td>
+                        <td><%= artigo.kb_published_date %></td>
+                        <td><%= artigo.kb_liked_count %></td>
+                        <td>
+                            <a>
+                                <button class="btn btn-outline-info">
+                                    <i class="material-icons">create</i>
+                                </button>
+                            </a>
+                            <a href="/article/delete/<%= artigo.kb_id %>">
+                                <button class="btn btn-outline-info">
+                                    <i class="material-icons">delete</i>    
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</main>
+

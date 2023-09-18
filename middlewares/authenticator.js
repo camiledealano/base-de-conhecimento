@@ -25,6 +25,8 @@ function authenticate(req, res, next) {
     } else {
         res.redirect('/login');
     }
+    
+    next();
 }
 
 //  const isAutenticado = (req, res, next) => {

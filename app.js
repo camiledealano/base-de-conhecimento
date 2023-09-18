@@ -6,6 +6,7 @@ const articles = require('./routes/articles');
 const authenticator = require('./middlewares/authenticator');
 const session = require('express-session');
 const flash = require('connect-flash');
+const fs = require('fs');
 
 // Configuracoes
 const app = express();
@@ -13,7 +14,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.json());
-app.use('/controllers', express.static('./public/controllers'));
+app.use('/controllers', express.static('./views/controllers'));
 app.use('/views', express.static('./views'));
 
 // Sessão
@@ -40,6 +41,11 @@ app.use('/users', users);
 app.use('/article', articles);
 
 // Renderizar páginas
+
+app.get('/visualizar-artigos', (_, res) => {
+  let artigos = JSON.parse(fs.readFileSync("./data/articles.json", 'utf-8'));
+  res.render('article_list', {artigos});
+})
 
 app.get('/cadastro-usuario', (_, res) => {
   res.render('users_create');

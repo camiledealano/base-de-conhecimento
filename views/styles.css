@@ -11,7 +11,7 @@ body {
 }
 
 .background-color {
-  background: linear-gradient(135deg, #0074E4 0%, #00A5E7 25%, #33B5E5 50%, #66C7E7 75%, #99D9E9 100%);
+  background: linear-gradient(135deg, #852fd6 0%, #8f058f 20%, #9932CC 40%, #852fd6 60%, #8f058f 80%, #9932CC 100%);
 }
 
 .new-user {
@@ -252,17 +252,23 @@ transform: .3s ease;
 }
 
 .submit:hover {
-background-color: rgb(56, 90, 194);
+  background-color: rgb(56, 90, 194);
+  }
+
+  @keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
-@keyframes pulse {
-from {
-  transform: scale(0.9);
-  opacity: 1;
-}
-
-to {
-  transform: scale(1.8);
-  opacity: 0;
-}
+.max-td {
+  max-width: 170px;
+  width: 170px;
+  text-overflow: ellipsis;
 }
