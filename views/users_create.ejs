@@ -1,10 +1,10 @@
 <%- include('header'); -%>
     <main class="container py-5" id="artigos">
-        <% if(typeof success_msg !== 'undefined') { %>       
-           <div class="alert alert-success"><%= success_msg %></div>
+        <% if(message) { %>       
+           <div class="alert alert-success"><%= message.message %></div>
         <% }; %>
         <h1>Cadastro de Usuário</h1>
-        <form action="/users/cadastrar" method="POST" enctype="application/x-www-form-urlencoded">
+        <form action="/users/add" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputnome4">Nome</label>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
         </form>
 
     </main>

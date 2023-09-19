@@ -28,8 +28,8 @@ app.use(flash());
 
 //Middlewares
 app.use((req,res,next) =>{
-  res.locals.success_msg =  req.flash('success_msg')
-  res.locals.error_msg =  req.flash('error_msg')
+  res.locals.message = req.session.message;
+  delete req.session.message;
   next()
 });
 
@@ -65,6 +65,10 @@ app.get('/', (_, res) => {
 
 app.get('/cadastro-artigo', (_, res) => {
   res.render('article_create');
+})
+
+app.get('/list-users', (_, res) => {
+  res.redirect('users/list');
 })
 
 // Porta onde roda a aplicação

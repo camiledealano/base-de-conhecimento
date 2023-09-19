@@ -1,182 +1,29 @@
 [
   {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$WP56aKdgM1SXyqRasTEqn.K49mErQ.I0fQMbrkuT06.GspLDXSUta",
-    "author_level": "Escolher...",
+    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
+    "author_name": "cvcvcvc",
+    "author_email": "crissiano_pires@hotmail.com",
+    "author_user": "crissiano_pires",
+    "author_pwd": "e67056bcd7ea64b7f5fa31a0be4ec1fbb7b98185",
+    "author_level": "normal",
     "author_status": "on"
   },
   {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$Stl2lshHrKzjbaP8CTUl6OYjusTeo202l0pqBsfsIrA43En89/W8C",
-    "author_level": "Escolher...",
+    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
+    "author_name": "cvcvcvc",
+    "author_email": "crissiano_pires@hotmail.com",
+    "author_user": "crissiano_pires",
+    "author_pwd": "e67056bcd7ea64b7f5fa31a0be4ec1fbb7b98185",
+    "author_level": "normal",
     "author_status": "on"
   },
   {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$vywtBDgFvpt93PbWVWTEY.llEZpp5Kpef5vAnfBf.JCdB2UbRVxY6",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$t5mery8meUBRe3RDnH8udug.J1d6Uq./ZjDFxNzEsYDoLPm2T9sBe",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$msSKt686ggpCUKjGtel2LOfXfxASl4OyXWlJL9iFho9bpZ2oFrd66",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$z/SmNLzzff6.QeML8T3F5eM51dYcpqTlYHtH/ISMI04jAVv/n4S72",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$Tri00X3mktZ0Mllj/PX8ge6wYVqIWn7eG.4nYbicIe/f1lP7lE1Qu",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$YDuG1whUy8sohjXSfkRBjOP5znUuQFD991RhrDRVWX9XNT9o8uY0K",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$GqaBZ7lT/ROxFebwmZ1Tje2NTNo0f7Q4P2sDO4qs4L4D.tdLXucQy",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$tQ2ruHC.lX0TlFEtwG7xRe4UDtppPu6D0RPbA/1K66RGfJ.kngoiO",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$yNw6jeCPxZNf4flVvjGCnON7r3aOyYS4VhAJmlDJe56vAEG58SNwy",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$iZs/pMNrAysEisAlNmkCWOXpuoEByJHyXFjm6gWPaFi/x8gJPAAAq",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$qC/a9WHyzMccEalR.5RiJea67AwhURtuvAQUkxaofXQt90QitUPWe",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$WOpBog3huC7yU/53MVZy1ers4S6drYYc2cPSHj4TkgqQSCnDP0yzK",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$81G43FYasjYOKgTbUA6P0.0hFHXaN.hkrS2swaNbv2.I7YYXNN3zm",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$v5EKWR73k6EnIjaSxr2u7.6NoDbOTzup55OSktdiemTbMyG.YLAzy",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$73r3pO5ia9DSPsliBgq1MuOHkn2gry5Rqylb0K22NmJaJgr9HVhc6",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$CqBhtLvF0nkSEt0ToEGu5e1SrKn0i154DHTqRH3U8H/otcZCf08RC",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$LGJWWC9FakXSpKs9qFK0qO42bx4gufV/fESB4JLP3.jeFbojZUrRK",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$Bac1AkEzf.igklMySU6GROAH99IcNfh1EtINFIIMMCJcQoHCmgwL2",
-    "author_level": "Escolher...",
+    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
+    "author_name": "cvcvcvc",
+    "author_email": "crissiano_pires@hotmail.com",
+    "author_user": "crissiano_pires",
+    "author_pwd": "efd12824fc4279ebb8e736fd70f66e04ff9d6f57",
+    "author_level": "admin",
     "author_status": "on"
   },
   {
@@ -184,323 +31,26 @@
     "author_name": "fg",
     "author_email": "crissiano_pires@hotmail.com",
     "author_user": "crissiano_pires",
-    "author_pwd": "$2b$10$UFyQNrL1Eg3C.mt9qoQYHOgRZhZEJxCl0TFivkw9ClAzqp6Clo8JC",
+    "author_pwd": "2d6a149e13095692e23f237a00fea87011a06eb6",
     "author_level": "admin",
     "author_status": "on"
   },
   {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$9SRYrkWYzDlpOsSkQr5HFelZTER12Bh2PB3C0Vq6bYaQ/64d8tEQC",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$ZyLv4Gw5lzTOlOKtDaPgQeVKMfpP9gU40fiFrEV1FR6LXW7QBK3Bq",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$xoo4PrWzpcGHsaX5kqbgy.mVCYybVhOU50id0v/fxGQo6u2GNoyxW",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$2mkTPO4E4oVEfxFi8ZKqve3Q6mWx0fDnpbKQgT7PpqfXTZrFM5krC",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$.qzIT6YVpz2i861fA6FmDO.4RZxuDFJ7rthQg32/Y60PdWBKrwlMG",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$DbhLobBlAvAxXs6./jmDYutOyXPeaUIUe1XqhC90.eaEF41p.1fSK",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$MgCe3nX6W9UDPNiZa7kiWejIreoIlH0Tjd5ZkKsl7DlI3.WyKyl1C",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$sY7O2Eip9iwLfZOIkTHqYes6hZlRvfgnLZzByGb3FMQ6bO5/nB0jC",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$hN2pDExlHu42fIVRuFo.xONqb6hP4BQx4w/hCwqB3A32Ly4SjQcwO",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$A0vI7ATp1DOKNT7MfNdKdOg6tFMEdoti46qvCRd29xS09bqO11pl6",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$klrJPp7GrQAhH1UwpMu.SeUah9XOljTyyqCHWZCgpNLv7oumgo6We",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$Co0sscK6uYK5LzRsgu/qI.y7tcufD2X.9Qy78s4V4C8fMV/uG2u6m",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$b8KjFHONl3Ty0gyauAzjw.UVQiyntMNHIhBOHL78HsM5hPhgRYeeC",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$5oyNSK5FXgam06f2v6BsyOP9znMBXZZmUbjZGvp215YzGcwn3nMcu",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$N5/AS2797Uiv45Id/l9YnuQES.AzrZjyAOlzdhpej0gQ3n5YXId4W",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$/xY270nCefQAQ/X8sTMEXO58BBDIHXn4vEViFyyOXbEYOnUc9j3fK",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$oXObgpXINBgV/LRoquGwa.kqubeWRFzhwZd2nDNy8mBLKWjjDsqK2",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$C.V2StRwhw/jOAUT4mbWE.zEnqoQXeQgtNk5YnylE9By7p/K9Axpa",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$RGkKLXZ4vGethpGcok6ajO23ebhfYQLjNQOSzuTYXiE9XTezKYOv.",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$EgwabYaQUKNG2l9hYdV93OYBlAmVRkyg6R848WnQHF9jxt2RCGLqK",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$FvMk2SlF8bssYOb8WNrpeeGY50XJpgv5eEbryhGYp0T1fiBZXkOSW",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$i5ee/qakd4DNgIwp.L3IBOaKxAzYV8thUPhcW7fTGS73juUIK0G6a",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$/FZi5UpcVcLWcoWTRZV6kumqQ3fCKuQbzjLWhXnKDdGtLQEPEfOga",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$i7/CWIHWq8BSKl1/a4LL2uIS9F1sVs5I2/xNloSSIF0yHKOV849ay",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$E/cRATBSqxhJgl7YjgigKO3p7WzBlYZDOy//WL2Dkk8YGYF20QIAu",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$oqXDbjgW0g.tTVTmPuJd2eLqlzw2Pf99JtbZntAVh1juT6ny02umW",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$RhYmsIuWtvnyhJZVwOjare6ZrVrwPUbvrv876ThfOb1p8tfSrvWk6",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "7bf6a7e7ff96a294d0deef236dcaf6f436c7f7b301c49e5de786b3d63ad64f49",
-    "author_name": "fg",
-    "author_email": "rayanapiress210@gmail.com",
-    "author_user": "rayanapiress210",
-    "author_pwd": "$2b$10$XyYudZYVapwcHXyuGjtFke39tLyd8yxFWvCaL32RBF3FYNxVYR.o2",
+    "author_id": "3b408cb48548b5037822c10eb0976b3cbf2cee3bf9c708796bf03941fbecd80f",
+    "author_name": "admin",
+    "author_email": "admin@admin",
+    "author_user": "admin",
+    "author_pwd": "2fb54875d166ab45a6a8b21f1631dec573a8cf07",
     "author_level": "admin",
     "author_status": "on"
   },
   {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$lLqQJyQb159O6aijqMJQgO8.q7YBcXxIxmbCSB5gRNGcemiDQ0G22",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$iEnpK5KXd26KxFT5wLPvxe4gKEE1ViIK1me440iWJcSUUm9seCTmW",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$1QlE8VSjGw6YIODXx20IY.1b7FNAsj7.FZbkgMIxy/3IFDDFwOnvS",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$AZs35SLlktOR7ltnX4AaeOdCQn5QI40tYmiG58jxvF6JK.GQrUXXC",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$bKmlwOwPIvmZEX1Fm3NBWe2f4pGvtsVSs2WNpRdUA6.d4mUDSHxfW",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "author_name": "",
-    "author_email": "",
-    "author_user": "",
-    "author_pwd": "$2b$10$93HPx1FoziclhG7CKhnNGOvPhU/aATi0CJHzdDQZRiFi8Tkb2QLa.",
-    "author_level": "Escolher...",
-    "author_status": "on"
-  },
-  {
-    "author_id": "133e5dcd4c7071ac135289ed24de2cbc9b88fae6207b7ffd3754032a7bd389ae",
-    "author_name": "teste",
-    "author_email": "asenhaehteste@a.com",
-    "author_user": "asenhaehteste",
-    "author_pwd": "e33ec1d8716c3ce7d3f79af04a09372ef9941edc",
-    "author_level": "normal",
+    "author_id": "b96fc6eebac14f2c499f4355e683b43a207e064190801261833279a2028082a0",
+    "author_name": "tester",
+    "author_email": "abc@abc",
+    "author_user": "abc",
+    "author_pwd": "1c457260fe516c5ae59798a03f8382a9ba7657d4",
+    "author_level": "admin",
     "author_status": "on"
   }
 ]
