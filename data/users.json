@@ -13,15 +13,6 @@
     "author_name": "cvcvcvc",
     "author_email": "crissiano_pires@hotmail.com",
     "author_user": "crissiano_pires",
-    "author_pwd": "e67056bcd7ea64b7f5fa31a0be4ec1fbb7b98185",
-    "author_level": "normal",
-    "author_status": "on"
-  },
-  {
-    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
-    "author_name": "cvcvcvc",
-    "author_email": "crissiano_pires@hotmail.com",
-    "author_user": "crissiano_pires",
     "author_pwd": "efd12824fc4279ebb8e736fd70f66e04ff9d6f57",
     "author_level": "admin",
     "author_status": "on"
@@ -50,6 +41,15 @@
     "author_email": "abc@abc",
     "author_user": "abc",
     "author_pwd": "1c457260fe516c5ae59798a03f8382a9ba7657d4",
+    "author_level": "admin",
+    "author_status": "on"
+  },
+  {
+    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
+    "author_name": "cvcvcvc",
+    "author_email": "crissiano_pires@hotmail.com",
+    "author_user": "crissiano_pires",
+    "author_pwd": "e67056bcd7ea64b7f5fa31a0be4ec1fbb7b98185",
     "author_level": "admin",
     "author_status": "on"
   }

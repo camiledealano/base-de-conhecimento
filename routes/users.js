@@ -10,6 +10,7 @@ router.post('/add', (req, res) => {
   const users = UserModel.readUsers();
   users.push(newUser);
   UserModel.writeUsers(users);
+  
   req.session.message = {
     type:'success',
     message:'Usuario cadastrado com sucesso!'
@@ -26,15 +27,16 @@ router.get('/list',  (req, res) => {
 
 router.get('/edit/:id', (req,res) => {
   var user = UserModel.findById(req.params.id);
-  if(user){
-    res.render('users_edit', {user: user})
+  if(user == null){
+    req.session.message = {
+      type:'error',
+      message:'Usuario não encontrado!'
+    };
+    res.redirect('/users/list');
+    
   };
 
-  req.session.message = {
-    type:'error',
-    message:'Usuario não encontrado!'
-  };
-  res.redirect('/users/list');
+  res.render('users_edit', {user: user})
 })
 
 router.post('/edit', (req,res) => {
