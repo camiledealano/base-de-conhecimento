@@ -7,7 +7,7 @@ const fs = require('fs');
 router.post('/cadastrar-artigo', (req,res) => {
   const newArticle = new ArticleModel(req.body);
   res.redirect('/home')
-})
+});
 
 router.get('/delete/:id', (req,res) => {
   const id = req.params.id;
@@ -20,6 +20,13 @@ router.get('/delete/:id', (req,res) => {
   fs.writeFileSync(filePath, JSON.stringify(artigos, null, 2));
   
   res.redirect("/visualizar-artigos");
-})
+});
+
+router.get('/list',  (req, res) => {
+  const articles =  ArticleModel.readArticles();
+  res.render('index', {
+    articles: articles
+  });
+});
 
 module.exports = router;

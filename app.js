@@ -7,7 +7,7 @@ const authenticator = require('./middlewares/authenticator');
 const session = require('express-session');
 const flash = require('connect-flash');
 const fs = require('fs');
-
+const likeCount = require('./middlewares/liked_counter');
 // Configuracoes
 const app = express();
 
@@ -29,6 +29,8 @@ app.use(flash());
 //Middlewares
 app.use((req,res,next) =>{
   res.locals.message = req.session.message;
+  res.locals.user = req.session.user;
+  res.locals.visibility = req.session.visibility;
   delete req.session.message;
   next()
 });
@@ -38,7 +40,7 @@ app.post('/login/autenticar', authenticator);
 
 app.use('/users', users);
 
-app.use('/article', articles);
+app.use('/articles', articles);
 
 // Renderizar páginas
 
@@ -55,12 +57,15 @@ app.get('/login', (_, res) => {
   res.render('login');
 });
 
-app.get('/home', (_, res) => {
-  res.render('index'); 
+app.get('/logout', (req, res) => {
+     delete req.session.user;
+     delete req.session.level;
+     delete req.session.visibility;
+     res.redirect('login');
 });
 
 app.get('/', (_, res) => {
-  res.render('index'); 
+  res.redirect('articles/list');
 });
 
 app.get('/cadastro-artigo', (_, res) => {
@@ -70,6 +75,13 @@ app.get('/cadastro-artigo', (_, res) => {
 app.get('/list-users', (_, res) => {
   res.redirect('users/list');
 })
+
+// app.get('/like-count/:value', (req,res) => {
+//   console.log(req.params.value);
+// });
+
+app.get('/like-count/:value', likeCount);
+
 
 // Porta onde roda a aplicação
 app.listen(9000, () => {

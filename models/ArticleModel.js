@@ -1,4 +1,6 @@
 const objectHash = require('object-hash');
+const fs = require('fs');
+const filePath = './data/articles.json';
 
 class ArticleModel {
     constructor(article) {
@@ -16,6 +18,15 @@ class ArticleModel {
     createArticleIdHash(article) {
         return objectHash(article);
     }
+
+    static readArticles = () => {
+        try {
+          const data = fs.readFileSync(filePath, 'utf8');
+          return JSON.parse(data);
+        } catch (error) {
+          return [];
+        };
+      };
 }
 
 module.exports = ArticleModel;

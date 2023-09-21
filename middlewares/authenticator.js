@@ -1,5 +1,6 @@
 const fs = require('fs');
 const objectHash = require('object-hash');
+const { use } = require('../routes/users');
 
 function authenticate(req, res, next) {
     const user = req.body.user;
@@ -8,21 +9,25 @@ function authenticate(req, res, next) {
     let usuarioEncontrado = false;
 
     for (let usuario of dadosUsuario) {
-        if (usuario.author_name === user && usuario.author_pwd === objectHash(password)) {
-            req.session.user = 'normal';
+        if (usuario.author_email === user && usuario.author_pwd === objectHash(password)) {
+            req.session.user = usuario.author_name;
+            req.session.level = usuario.author_level;
             usuarioEncontrado = true;
+            if(usuario.author_level === 'admin'){
+                req.session.visibility = true;
+            }
             break;
         }
     }
-
-    if (user === 'admin' && password === '1234') {
-        req.session.user = 'root';
-        usuarioEncontrado = true; 
-    }
+    
 
     if (usuarioEncontrado) {
-        res.redirect('/home');
+        res.redirect('/');
     } else {
+        req.session.message = {
+            type:'error',
+            message:'Usuario não encontrado!'
+          };
         res.redirect('/login');
     }
     

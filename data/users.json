@@ -1,56 +1,20 @@
 [
   {
-    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
-    "author_name": "cvcvcvc",
-    "author_email": "crissiano_pires@hotmail.com",
-    "author_user": "crissiano_pires",
-    "author_pwd": "e67056bcd7ea64b7f5fa31a0be4ec1fbb7b98185",
-    "author_level": "normal",
-    "author_status": "on"
-  },
-  {
-    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
-    "author_name": "cvcvcvc",
-    "author_email": "crissiano_pires@hotmail.com",
-    "author_user": "crissiano_pires",
-    "author_pwd": "efd12824fc4279ebb8e736fd70f66e04ff9d6f57",
-    "author_level": "admin",
-    "author_status": "on"
-  },
-  {
-    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
-    "author_name": "fg",
-    "author_email": "crissiano_pires@hotmail.com",
-    "author_user": "crissiano_pires",
-    "author_pwd": "2d6a149e13095692e23f237a00fea87011a06eb6",
-    "author_level": "admin",
-    "author_status": "on"
-  },
-  {
     "author_id": "3b408cb48548b5037822c10eb0976b3cbf2cee3bf9c708796bf03941fbecd80f",
     "author_name": "admin",
     "author_email": "admin@admin",
     "author_user": "admin",
-    "author_pwd": "2fb54875d166ab45a6a8b21f1631dec573a8cf07",
+    "author_pwd": "20e0cbcd3cf233b748ebc24193b9afa7bfd8636b",
     "author_level": "admin",
     "author_status": "on"
   },
   {
-    "author_id": "b96fc6eebac14f2c499f4355e683b43a207e064190801261833279a2028082a0",
-    "author_name": "tester",
-    "author_email": "abc@abc",
-    "author_user": "abc",
-    "author_pwd": "1c457260fe516c5ae59798a03f8382a9ba7657d4",
-    "author_level": "admin",
-    "author_status": "on"
-  },
-  {
-    "author_id": "320a7a5feb4bd007eedb309e9ab6db2b4c268f1c3af61e93f5853d55df8fbd8c",
-    "author_name": "cvcvcvc",
-    "author_email": "crissiano_pires@hotmail.com",
-    "author_user": "crissiano_pires",
-    "author_pwd": "e67056bcd7ea64b7f5fa31a0be4ec1fbb7b98185",
-    "author_level": "admin",
+    "author_id": "91b427ddc75587b952ce5e23da8d7ab003523b08684d3d6225b291eb1d737f9c",
+    "author_name": "normal",
+    "author_email": "normal@normal",
+    "author_user": "normal",
+    "author_pwd": "eb7d4fd8d5fccf37e26ec000b6779646213e4691",
+    "author_level": "normal",
     "author_status": "on"
   }
 ]

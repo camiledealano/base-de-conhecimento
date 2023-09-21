@@ -5,7 +5,7 @@ const UserModel = require('../models/UserModel');
 
 
 // Rotas
-router.post('/add', (req, res) => {
+router.post('/create', (req, res) => {
   const newUser = new UserModel(req.body);
   const users = UserModel.readUsers();
   users.push(newUser);
@@ -41,6 +41,10 @@ router.get('/edit/:id', (req,res) => {
 
 router.post('/edit', (req,res) => {
   UserModel.update(req.body);
+  req.session.message = {
+    type:'success',
+    message:'Usuario editado com sucesso!'
+  };
   res.redirect('/users/list');
 });
 

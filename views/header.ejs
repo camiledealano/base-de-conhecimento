@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,10 +14,9 @@
       }
   </style>
 </head>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-light-purple">
   <div class="container">
-      <a class="navbar-brand" href="/home">
+      <a class="navbar-brand" href="/">
           <img src="/views/assets/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
           BC - Base de Conhecimento
       </a>
@@ -29,36 +25,50 @@
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto justify-content-end"> <!-- Use justify-content-end para alinhar à direita -->
-              <li class="nav-item">
-                  <a class="nav-link" href="/login">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/cadastro-usuario">Cadastrar-se</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/list-users">Listar Usuarios</a>
-            </li>
+          <ul class="navbar-nav ml-auto justify-content-end"> 
+
+            <% if(user) { %>       
+                <li class="nav-item active">
+                    <a class="nav-link disabled" href="#">Olá, <%= user %>!</a>
+                </li>    
+            <% }; %>
+
+            <% if(visibility) { %>       
+                <li class="nav-item">
+                    <a class="nav-link" href="/list-users">Listar Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cadastro-usuario">Cadastrar-se</a>
+                </li>   
+            <% }; %>    
+
+            <% if(user){ %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out</a>            
+                </li>
+               
+            <% } else{ %>  
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>        
+                </li>
+             <% } %>           
           </ul>
       </div>
   </div>
 </nav>
-</body>
-
 
 <header class="py-3 mb-4 border-bottom">
   <div class="container d-flex flex-wrap justify-content-between align-items-center">
       <div class="d-flex">
-          <a class="nav-link active me-3" href="/home">Home</a>
-          <a class="nav-link me-3" href="/cadastro-artigo">Escrever Artigo</a>
-          <a class="nav-link" href="#">Destaques</a>
+          <a class="nav-link active me-3" href="/">Home</a>
+          <a class="nav-link me-3" href="#">Destaques</a>
+          <% if(visibility) { %>       
+            <a class="nav-link" href="/cadastro-artigo">Escrever Artigo</a>
+          <% }; %>                    
       </div>
       <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
           <input type="search" class="form-control" placeholder="Busque um artigo..." aria-label="Search">
       </form>
   </div>
 </header>
-</body>
-
-</html>
 

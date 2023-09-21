@@ -1,8 +1,6 @@
 <%- include('header'); -%>
     <main class="container py-5" id="artigos">
-        <% if(typeof success_msg !== 'undefined') { %>       
-           <div class="alert alert-success"><%= success_msg %></div>
-        <% }; %>
+        <%- include('./partials/_msg'); -%>
         <h1>Editar Usuário</h1>
         <form action="/users/edit" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="form-row">
