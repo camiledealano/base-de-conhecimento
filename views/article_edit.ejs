@@ -2,38 +2,38 @@
     <title>Editar Artigo</title>
 </head>
 
-<%- include('header'); -%>
+<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
 
-    <main class="container py-5" id="artigos">
-        <%- include('./partials/_msg'); -%>
-        <h1>Editar Artigo</h1>
-        <form class="row g-3" action="/article/cadastrar-artigo" method="POST" enctype="application/x-www-form-urlencoded">
+    <main class="container container-form">
+        <h2 class="text-center mb-1">Editar Artigo</h2>
+        <form class="row g-3" action="/articles/edit" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="col-md-12">
-              <label for="kb_title" class="form-label">Título</label>
-              <input type="text" class="form-control" name="kb_title" value="<%= article.kb_title %>">
+              <input class="focus-purple" type="hidden" name="id" value="<%= article.id %>" display>
+              <label for="title" class="form-label">Título</label>
+              <input type="text" class="form-control focus-purple" name="title" value="<%= article.title %>">
             </div>
             <div class="col-md-12">
-              <label for="kb_body" class="form-label">Corpo do texto</label>
-              <textarea class="form-control" style="height: 200px;" name="kb_body"><%= article.kb_body %></textarea>
+              <label for="body" class="form-label">Corpo do texto</label>
+              <textarea class="form-control focus-purple" style="height: 200px;" name="body"><%= article.body %></textarea>
             </div>
             <div class="col-12">
-              <label for="kb_keywords" class="form-label">Palavras-chave</label>
-              <input type="text" class="form-control" name="kb_keywords" value="<%= article.kb_keywords %>">
+              <label for="keywords" class="form-label">Palavras-chave</label>
+              <input type="text" class="form-control focus-purple" name="keywords" value="<%= article.keywords %>">
             </div>
             <div class="col-md-12">
               <div class="row">
                 <div class="col-md-6">
-                  <label for="kb_author_email" class="form-label">E-mail do autor</label>
-                  <input type="text" class="form-control" name="kb_author_email" value="<%= article.kb_author_email %>">              
+                  <label for="author_name" class="form-label">Nome do autor</label>
+                  <input type="text" class="form-control focus-purple" name="author_name" value="<%= article.author_name %>">              
                 </div>
                 <div class="col-md-6">
-                  <label for="kb_published_date" class="form-label">Data de publicação</label>
-                  <input type="text" class="form-control" name="kb_published_date" value="<%= article.kb_published_date %>">              
+                  <label for="published_date" class="form-label">Data de publicação</label>
+                  <input type="text" class="form-control focus-purple" name="published_date" value="<%= article.published_date %>">              
                 </div>
               </div>
             </div>
             <div class="text-center btn-cadastrar-artigo">
-              <button type="submit" class="btn btn-primary" style="width: 200px;">Editar</button>
+              <button type="submit" class="btn btn-success" style="width: 150px;">Editar</button>
             </div>
           </form>
     </main>
