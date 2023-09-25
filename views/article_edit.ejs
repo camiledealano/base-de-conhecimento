@@ -1,0 +1,39 @@
+<head>
+    <title>Editar Artigo</title>
+</head>
+
+<%- include('header'); -%>
+
+    <main class="container py-5" id="artigos">
+        <%- include('./partials/_msg'); -%>
+        <h1>Editar Artigo</h1>
+        <form class="row g-3" action="/article/cadastrar-artigo" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="col-md-12">
+              <label for="kb_title" class="form-label">Título</label>
+              <input type="text" class="form-control" name="kb_title" value="<%= article.kb_title %>">
+            </div>
+            <div class="col-md-12">
+              <label for="kb_body" class="form-label">Corpo do texto</label>
+              <textarea class="form-control" style="height: 200px;" name="kb_body"><%= article.kb_body %></textarea>
+            </div>
+            <div class="col-12">
+              <label for="kb_keywords" class="form-label">Palavras-chave</label>
+              <input type="text" class="form-control" name="kb_keywords" value="<%= article.kb_keywords %>">
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="kb_author_email" class="form-label">E-mail do autor</label>
+                  <input type="text" class="form-control" name="kb_author_email" value="<%= article.kb_author_email %>">              
+                </div>
+                <div class="col-md-6">
+                  <label for="kb_published_date" class="form-label">Data de publicação</label>
+                  <input type="text" class="form-control" name="kb_published_date" value="<%= article.kb_published_date %>">              
+                </div>
+              </div>
+            </div>
+            <div class="text-center btn-cadastrar-artigo">
+              <button type="submit" class="btn btn-primary" style="width: 200px;">Editar</button>
+            </div>
+          </form>
+    </main>

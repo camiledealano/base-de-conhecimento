@@ -1,0 +1,61 @@
+<head>
+    <title>Artigos</title>
+</head>
+
+<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
+
+<main>
+    <% if(message) { %>       
+        <div class="alert alert-success"><%= message.message %></div>
+     <% }; %>
+    <div class="mb-3" style="margin-left: 6%; width: 140px;">
+        <a href="/cadastro-artigo" class="btn btn-success d-flex align-items-center">
+            <i class="material-icons mr-2">add</i>    
+            Novo artigo
+        </a>
+    </div>
+    <div class="list-data">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Corpo</th>
+                    <th scope="col">Palavras-Chave</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Data de Publicação</th>
+                    <th scope="col">Likes</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>    
+            <tbody>
+                <% articles.forEach(function(article) { %>
+                    <tr>
+                        <td class="td-wrap"><%= article.kb_id %></td>
+                        <td class="td-wrap"><%= article.kb_title %></td>
+                        <td class="td-wrap"><%= article.kb_body %></td>
+                        <td class="td-wrap"><%= article.kb_keywords %></td>
+                        <td class="td-wrap"><%= article.kb_author_email %></td>
+                        <td class="td-wrap"><%= article.kb_published_date %></td>
+                        <td><%= article.kb_liked_count %></td>
+                        <td class="btn-group">
+                            <a href="/articles/edit/<%= article.kb_id %>">
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="material-icons">create</i>
+                                </button>
+                            </a>
+                            <div style="margin: 3px;"></div>
+                            <a href="/articles/delete/<%= article.kb_id %>">
+                                <button class="btn btn-outline-danger btn-sm">
+                                    <i class="material-icons">delete</i>    
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</main>
+

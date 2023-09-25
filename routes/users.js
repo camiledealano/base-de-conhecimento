@@ -18,7 +18,7 @@ router.post('/create', (req, res) => {
   res.redirect('/users/list');
 });
 
-router.get('/list',  (req, res) => {
+router.get('/list',  (_, res) => {
   const users =  UserModel.readUsers();
   res.render('users_list', {
     users: users

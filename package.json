@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "readline-sync": "^1.4.10",
-    "request": "^2.88.2"
+    "readline-sync": "^1.4.10"
   }
 }

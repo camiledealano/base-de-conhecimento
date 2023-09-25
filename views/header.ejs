@@ -8,48 +8,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/views/styles.css">
     <link rel="icon" href="/views/assets/icon.png" type="image/png">
-    <style>
-      .bg-light-purple {
-          background-color: #972ed9; /* Cor de fundo roxo claro */
-      }
-  </style>
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-light-purple">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-      <a class="navbar-brand" href="/">
-          <img src="/views/assets/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
-          BC - Base de Conhecimento
+      <a class="navbar-brand font-croissant" href="/">
+          <img src="/views/assets/icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-top mr-2">
+          <span>BC - Base do Conhecimento</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto justify-content-end"> 
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav ml-auto font-nunito-bold"> 
+            
 
-            <% if(user) { %>       
-                <li class="nav-item active">
-                    <a class="nav-link disabled" href="#">Olá, <%= user %>!</a>
-                </li>    
-            <% }; %>
-
-            <% if(visibility) { %>       
+            <% if(visibility) { %>      
                 <li class="nav-item">
-                    <a class="nav-link" href="/list-users">Listar Usuarios</a>
-                </li>
+                    <a class="nav-link font-nunito-bold" href="/list-articles">Artigos</a>
+                </li> 
                 <li class="nav-item">
-                    <a class="nav-link" href="/cadastro-usuario">Cadastrar-se</a>
-                </li>   
+                    <a class="nav-link font-nunito-bold" href="/list-users">Usuários</a>
+                </li>               
             <% }; %>    
 
             <% if(user){ %>
                 <li class="nav-item">
-                    <a class="nav-link" href="/logout">Log Out</a>            
+                    <a class="nav-link font-nunito-bold active" href="/logout">Sair</a>            
                 </li>
                
             <% } else{ %>  
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>        
+                    <a class="nav-link font-nunito-bold" href="/login">Login</a>        
                 </li>
              <% } %>           
           </ul>
@@ -57,18 +43,19 @@
   </div>
 </nav>
 
-<header class="py-3 mb-4 border-bottom">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center">
-      <div class="d-flex">
-          <a class="nav-link active me-3" href="/">Home</a>
-          <a class="nav-link me-3" href="#">Destaques</a>
-          <% if(visibility) { %>       
-            <a class="nav-link" href="/cadastro-artigo">Escrever Artigo</a>
-          <% }; %>                    
+<% if (showHeaderContent) { %>
+    <header class="py-3 mb-4 border-bottom">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+          <div class="d-flex">
+              <a class="nav-link active me-3 font-nunito-regular-hover" href="/">Home</a>
+              <a class="nav-link me-3 font-nunito-regular-hover" href="#">Destaques</a>                                
+          </div>
+          <% if (showSearchArticle) { %>
+            <form class="col-12 col-lg-4 mb-3 mb-lg-0" role="search">
+                <input type="search" class="form-control focus-purple" placeholder="Busque um artigo pelo título" aria-label="Search">
+            </form>
+          <% } %>
       </div>
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
-          <input type="search" class="form-control" placeholder="Busque um artigo..." aria-label="Search">
-      </form>
-  </div>
-</header>
+    </header>
+<% } %>
 

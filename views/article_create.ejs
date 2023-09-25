@@ -1,62 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">    <!-- IMPORTANDO PLUGIN DO SELECT2 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" />
+    <title>Escrever Artigo</title>
 </head>
-<body >
 
-<header>
-    <%- include('header'); -%>
-</header>
-<main class="container new-article">
-  <h2>Cadastre um artigo</h2>
-  <form class="row g-3" action="/article/cadastrar-artigo" method="POST" enctype="application/x-www-form-urlencoded">
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
+
+  <main class="container container-form">
+    <h2 class="text-center mb-1">Cadastre um artigo</h2>
+    <form class="row g-3" action="/articles/create" method="POST" enctype="application/x-www-form-urlencoded">
+      <div class="col-md-12">
+        <label for="title" class="form-label">Título</label>
+        <input type="text" class="form-control focus-purple" name="title">
+      </div>
+      <div class="col-md-12">
+        <label for="body" class="form-label">Corpo do texto</label>
+        <textarea class="form-control focus-purple" name="body" style="height: 200px;"></textarea>
+      </div>
+      <div class="col-12">
+        <label for="keywords" class="form-label">Palavras-chave</label>
+        <input type="text" class="form-control focus-purple" name="keywords">
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="author_name" class="form-label">E-mail do autor</label>
+            <input type="text" class="form-control focus-purple" name="author_name">              
           </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="col-md-6">
+            <label for="published_date" class="form-label">Data de publicação</label>
+            <input type="text" class="form-control focus-purple" name="published_date">              
           </div>
         </div>
       </div>
-  </div>
-    <div class="col-md-12">
-      <label for="title" class="form-label">Título</label>
-      <input type="text" class="form-control" name="title">
-    </div>
-    <div class="col-md-12">
-      <label for="body" class="form-label">Corpo do texto</label>
-      <textarea class="form-control" name="body" style="height: 200px;"></textarea>
-    </div>
-    <div class="col-12">
-      <label for="keywords" class="form-label">Palavras-chave</label>
-      <input type="text" class="form-control" name="keywords">
-    </div>
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-6">
-          <label for="author_name" class="form-label">E-mail do autor</label>
-          <input type="text" class="form-control" name="author_name">              
-        </div>
-        <div class="col-md-6">
-          <label for="published_date" class="form-label">Data de publicação</label>
-          <input type="text" class="form-control" name="published_date">              
-        </div>
+      <div class="text-center btn-cadastrar-artigo">
+        <button type="submit" class="btn btn-success" style="width: 150px;">Cadastrar</button>
       </div>
-    </div>
-    <div class="text-center btn-cadastrar-artigo">
-      <button type="submit" class="btn btn-primary" style="width: 200px;">Cadastrar</button>
-    </div>
-  </form>
-</main>
-</body>
-</html>
+    </form>
+  </main>

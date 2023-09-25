@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const users = require('./routes/users');
 const articles = require('./routes/articles');
+const index = require('./routes/index')
 const authenticator = require('./middlewares/authenticator');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -35,6 +36,8 @@ app.use((req,res,next) =>{
   next()
 });
 
+app.get('/like-count/:value', likeCount);
+
 // Rotas
 app.post('/login/autenticar', authenticator);
 
@@ -42,14 +45,16 @@ app.use('/users', users);
 
 app.use('/articles', articles);
 
+app.use('/home', index);
+
 // Renderizar páginas
 
 app.get('/visualizar-artigos', (_, res) => {
   let artigos = JSON.parse(fs.readFileSync("./data/articles.json", 'utf-8'));
-  res.render('article_list', {artigos});
+  res.render('articles_list', {artigos});
 })
 
-app.get('/cadastro-usuario', (_, res) => {
+app.get('/novo-usuario', (_, res) => {
   res.render('users_create');
 });
 
@@ -65,7 +70,7 @@ app.get('/logout', (req, res) => {
 });
 
 app.get('/', (_, res) => {
-  res.redirect('articles/list');
+  res.redirect('home');
 });
 
 app.get('/cadastro-artigo', (_, res) => {
@@ -76,12 +81,13 @@ app.get('/list-users', (_, res) => {
   res.redirect('users/list');
 })
 
+app.get('/list-articles', (_,res) => {
+  res.redirect('articles/list')
+})
+
 // app.get('/like-count/:value', (req,res) => {
 //   console.log(req.params.value);
 // });
-
-app.get('/like-count/:value', likeCount);
-
 
 // Porta onde roda a aplicação
 app.listen(9000, () => {

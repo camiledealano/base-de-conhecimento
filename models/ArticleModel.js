@@ -20,13 +20,42 @@ class ArticleModel {
     }
 
     static readArticles = () => {
-        try {
-          const data = fs.readFileSync(filePath, 'utf8');
-          return JSON.parse(data);
-        } catch (error) {
-          return [];
-        };
+      try {
+        const data = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(data);
+      } catch (error) {
+        return [];
       };
+    };
+
+    static writeArticles = (articles) => {
+      try {
+        const data = fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
+        return JSON.parse(data);
+      } catch (error) {
+        return [];
+      }
+    }
+
+    static findById = (id) => {
+      const articles = this.readArticles();
+      const article = articles.find(a => a.article_id = id);
+
+      return article != null ? article : null;
+    } 
+
+    static deleteArticle = (id) => {
+      const articles = this.readArticles();
+      const indexForDelete = articles.findIndex(a => a.kb_id == id);
+
+      if (indexForDelete == null) {
+        return null;
+      }
+
+      articles.splice(indexForDelete, 1);
+      this.writeArticles(articles);
+      
+    }
 }
 
 module.exports = ArticleModel;

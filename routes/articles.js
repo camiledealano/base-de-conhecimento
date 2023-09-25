@@ -4,29 +4,34 @@ const ArticleModel = require('../models/ArticleModel');
 const filePath = './data/articles.json';
 const fs = require('fs');
 
-router.post('/cadastrar-artigo', (req,res) => {
-  const newArticle = new ArticleModel(req.body);
-  res.redirect('/home')
+router.post('/create', (req,res) => {
+  new ArticleModel(req.body);
+  res.redirect('/')
 });
 
 router.get('/delete/:id', (req,res) => {
-  const id = req.params.id;
-  const artigos = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-  const indexIdParaExcluir = artigos.findIndex(artigo => artigo.kb_id == id);
-
-  if (indexIdParaExcluir == null) {return}
-
-  artigos.splice(indexIdParaExcluir, 1);
-  fs.writeFileSync(filePath, JSON.stringify(artigos, null, 2));
-  
+  ArticleModel.deleteArticle(req.params.id);
   res.redirect("/visualizar-artigos");
 });
 
-router.get('/list',  (req, res) => {
+router.get('/list',  (_, res) => {
   const articles =  ArticleModel.readArticles();
-  res.render('index', {
+  res.render('articles_list', {
     articles: articles
   });
 });
+
+router.get('/edit/:id', (req,res) => {
+  var article = ArticleModel.findById(req.params.id);
+  if(article == null){
+    req.session.message = {
+      type:'error',
+      message:'Usuario não encontrado!'
+    };
+    res.redirect('/articles/list');
+  };
+
+  res.render('article_edit', {article: article});
+})
 
 module.exports = router;
