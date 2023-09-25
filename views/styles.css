@@ -42,7 +42,7 @@ nav {
 }
 
 .background-gradient {
-  background: linear-gradient(135deg, #cd8efd 0%, #ffac62 100%);
+  background: linear-gradient(135.9deg, rgb(109, 25, 252) 16.4%, rgb(125, 31, 165) 56.1%);
 }
 
 .new-user {
