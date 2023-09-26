@@ -45,18 +45,9 @@ body {
   background: linear-gradient(135.9deg, rgb(109, 25, 252) 16.4%, rgb(125, 31, 165) 56.1%);
 }
 
-.new-user {
-  font-size: 14px;
-  position: absolute;
-  bottom: 10;
-}
-
-.new-user a {
-  color: var(--primary);
-}
-
-.new-user a:hover {
-  color: rgb(43, 136, 100);
+.welcome {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
 }
 
 .container-form {
@@ -261,7 +252,6 @@ font-size: 14px;
   color: green;
 }
 
-
 .td-wrap {
   max-width: 150px; 
   word-wrap: break-word;
@@ -270,7 +260,6 @@ font-size: 14px;
 .list-data {
   width: 90%;
   margin: auto;
-  text-align: center;
   display: flex;
   justify-content: center;
 }

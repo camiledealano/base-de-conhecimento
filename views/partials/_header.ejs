@@ -1,5 +1,4 @@
 <%- include('_head'); -%>
-<body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand font-croissant" href="/">
@@ -12,8 +11,7 @@
                           <a class="nav-link font-nunito-bold" href="/">Home</a>
                       </li>  
                   <% if(user && user.author_level == 'administrador'){ %>
-                  
-                      <li class="nav-item"> <!-- só aparecer quando o usuário é um admin -->
+                      <li class="nav-item">
                           <a class="nav-link font-nunito-bold" href="/list-articles">Artigos</a>
                       </li> 
                       <li class="nav-item">
@@ -33,7 +31,7 @@
                 </ul>
             </div>
         </div>
-      </nav>
+    </nav>
       
       
           

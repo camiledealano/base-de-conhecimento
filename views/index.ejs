@@ -1,8 +1,8 @@
 <%- include('./partials/_header'); -%>
 
   <% if(user) { %>   
-  <div class="d-flex justify-content-center align-items-center">
-    <h2 class="font-text">Olá, <%= user.author_user %>!</h2>
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <h2 class="welcome">Olá, <%= user.author_user %>!</h2>
   </div>
   <% }; %>
 
@@ -48,7 +48,7 @@
     </div>
 
     <div class="card mb-4">
-        <h4 class="card-header text-center mb-4">10 Mais curtidos</h4>
+        <h4 class="card-header text-center mb-4">Os 10 mais curtidos</h4>
       <% mostLikedArticles.forEach(function(article) { %>
           <div class="col-sm-6 col-lg-4 mb-4">
             <div class="card text-center">

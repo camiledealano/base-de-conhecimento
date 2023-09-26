@@ -9,7 +9,6 @@
             </a>
         </div>
      <% }; %>
-     <div class="container">
     <div class="mb-4" style="margin-left: 6%; width: 150px;">
         <a href="/novo-usuario" class="btn btn-success d-flex align-items-center">
             <i class="material-icons mr-2">add</i>    
@@ -23,6 +22,7 @@
                     <th scope="col">Id</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Usuário</th>
+                    <th scope="col">E-mail</th>
                     <th scope="col">Nível</th>
                     <th scope="col">Status</th>
                     <th scope="col">Ações</th>
@@ -35,6 +35,7 @@
                         <td><%= user.author_id %></td>
                         <td><%= user.author_name %></td>
                         <td><%= user.author_user %></td>
+                        <td><%= user.author_email %></td>
                         <td><%= user.author_level %></td>
                         <td><%= user.author_status %></td>
                         <td class="btn-group">
@@ -55,7 +56,6 @@
             </tbody>
         </table>
     </div>
-</div>
 </main>
 
 <%- include('./partials/_footer'); -%>

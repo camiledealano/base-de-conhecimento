@@ -1,28 +1,19 @@
 [
   {
-    "author_id": "b3e765ad8da96a684d3f41d114e5cdced2f85f113ce701b5679a37764233790b",
+    "author_id": "81519b57d5f8227e9e04c340bddf9a4ea11878286190d41ac5b26a58fb828607",
     "author_name": "Administrador",
-    "author_email": "adm@adm",
+    "author_email": "adm@unesc.com",
     "author_user": "adm",
-    "author_pwd": "e4824e56032c3a78a1a3d956d6f1504723fca08b",
+    "author_pwd": "952b076d163bb5a01e6beb9065d30b4a40c7fb3b",
     "author_level": "administrador",
     "author_status": "Ativo"
   },
   {
-    "author_id": "51f18cabe58695595f6f02603dec1172b2126681f4b20098fec7ab760fe61d14",
-    "author_name": "a",
-    "author_email": "a@a",
-    "author_user": "a",
-    "author_pwd": "5534a68034d8b780cb8676def94b51f538c7a502",
-    "author_level": "normal",
-    "author_status": "Ativo"
-  },
-  {
-    "author_id": "746dce1016cc42e1ded763ce1956976fcd5514ab0d3a17524e1c877688a07984",
-    "author_name": "camile",
-    "author_email": "camile@testuda",
-    "author_user": "camile",
-    "author_pwd": "ecfa1b6ea5772f9155fcf87207f6fba777d825e8",
+    "author_id": "d601198578aef1c53cff89df3022b7f06ed6b347c4985c15e4e2b0d1674b8c7e",
+    "author_name": "Usuário normal",
+    "author_email": "usuario@unesc.com",
+    "author_user": "usuario",
+    "author_pwd": "4cba1a7e9931545693fbd1564ea3af2bebe73480",
     "author_level": "normal",
     "author_status": "Ativo"
   }

@@ -1,6 +1,6 @@
 <%- include('./partials/_header'); -%>
 
-    <main class="container container-form mt-5">
+    <main class="container container-form mt-5 mb-5">
         <%- include('./partials/_msg'); -%>
         <h2 class="text-center mb-1">Editar Usuário</h2>
         <form action="/users/edit" method="POST" enctype="application/x-www-form-urlencoded">
@@ -24,7 +24,7 @@
                     <label for="inputEstado">Nível de Acesso</label>
                     <select id="inputEstado" class="form-control focus-purple" name="author_level">
                         <option value="" disabled selected>Escolher...</option>
-                        <option <% if (user.author_level === 'admin') { %>selected<% } %>>Administrador</option>
+                        <option <% if (user.author_level === 'administrador') { %>selected<% } %>>Administrador</option>
                         <option <% if (user.author_level === 'normal') { %>selected<% } %>>Usuário Comum</option>
                     </select>
                 </div>

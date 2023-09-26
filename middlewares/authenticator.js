@@ -8,7 +8,7 @@ function authenticate(req, res, next) {
             return next();
         }else{
             req.session.message = {
-                type:'error',
+                type:'danger',
                 message:'Você precisa ter permissão de administrador!'
               };
               
@@ -18,7 +18,7 @@ function authenticate(req, res, next) {
 
     if(Object.keys(req.body).length === 0){
         req.session.message = {
-            type:'error',
+            type:'danger',
             message:'Você precisa ter permissão de administrador!'
           };
 
@@ -34,7 +34,7 @@ function authenticate(req, res, next) {
           
             if(usuario.author_status === 'off'){
                 req.session.message = {
-                    type:'error',
+                    type:'danger',
                     message:'Este usuário está offline!'
                 };
 
@@ -49,7 +49,7 @@ function authenticate(req, res, next) {
         return res.redirect('/home');
     } else {
         req.session.message = {
-            type:'error',
+            type:'danger',
             message:'Usuário não encontrado!'
           };
         return res.redirect('/login');

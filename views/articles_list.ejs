@@ -1,5 +1,4 @@
 <%- include('./partials/_header'); -%>
-
 <main class="mt-4">
     <% if(message) { %>       
         <div class="container alert alert-success d-flex justify-content-between align-items-center" style="width: 400px;">
@@ -9,7 +8,6 @@
             </a>
         </div>
      <% }; %>
-     <div class="container">
     <div class="mb-4" style="margin-left: 6%; width: 140px;">
         <a href="/cadastro-artigo" class="btn btn-success d-flex align-items-center">
             <i class="material-icons mr-2">add</i>    
@@ -25,8 +23,8 @@
                     <th scope="col">Corpo</th>
                     <th scope="col">Palavras-Chave</th>
                     <th scope="col">Autor</th>
-                    <th scope="col">Data de Publicação</th>
-                    <th scope="col">Likes</th>
+                    <th scope="col" class="text-center">Data de Publicação</th>
+                    <th scope="col" class="text-center">Likes</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>    
@@ -38,8 +36,8 @@
                         <td class="max-cell"><%= a.body %></td>
                         <td class="max-cell"><%= a.keywords %></td>
                         <td class="max-cell"><%= a.author_name %></td>
-                        <td><%= a.published_date %></td>
-                        <td><%= a.likes %></td>
+                        <td class="text-center"><%= a.published_date %></td>
+                        <td class="text-center"><%= a.likes %></td>
                         <td class="btn-group">                 
                             <a href="/articles/edit/<%= a.id %>">
                                 <button class="btn btn-outline-primary btn-sm">
@@ -58,7 +56,6 @@
             </tbody>
         </table>
     </div>
-</div>
 </main>
 
 <%- include('./partials/_footer'); -%>
