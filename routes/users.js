@@ -2,10 +2,10 @@
 const express = require('express');
 const router = express.Router();
 const UserModel = require('../models/UserModel'); 
-
+const isAdmin = require('../middlewares/isAdmin');
 
 // Rotas
-router.post('/create', (req, res) => {
+router.post('/create',isAdmin, (req, res) => {
   const newUser = new UserModel(req.body);
   const users = UserModel.readUsers();
   users.push(newUser);
@@ -25,7 +25,7 @@ router.get('/list',  (_, res) => {
   });
 });
 
-router.get('/edit/:id', (req,res) => {
+router.get('/edit/:id',isAdmin, (req,res) => {
   var user = UserModel.findById(req.params.id);
   if(user == null){
     req.session.message = {
@@ -39,7 +39,7 @@ router.get('/edit/:id', (req,res) => {
   res.render('users_edit', {user: user})
 })
 
-router.post('/edit', (req,res) => {
+router.post('/edit',isAdmin, (req,res) => {
   UserModel.update(req.body);
   req.session.message = {
     type:'success',
@@ -48,7 +48,7 @@ router.post('/edit', (req,res) => {
   res.redirect('/users/list');
 });
 
-router.get('/delete/:id', (req,res) => {
+router.get('/delete/:id',isAdmin, (req,res) => {
   UserModel.findByIdAndRemove(req.params.id);
   req.session.message = {
     type:'success',

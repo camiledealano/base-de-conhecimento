@@ -29,12 +29,16 @@ function authenticate(req, res, next) {
     let usuarioEncontrado = false;
     for (let usuario of dadosUsuario) {
         if (usuario.author_email === req.body.user && usuario.author_pwd === objectHash(req.body.password)) {
-
             req.session.user = usuario;
-
             usuarioEncontrado = true;
-            if(usuario.author_level === 'administrador'){
-                req.session.visibility = true;
+          
+            if(usuario.author_status === 'off'){
+                req.session.message = {
+                    type:'error',
+                    message:'Este usuário está offline!'
+                };
+
+                return res.redirect('/login');  
             }
             break;
         }
@@ -42,16 +46,15 @@ function authenticate(req, res, next) {
     
 
     if (usuarioEncontrado) {
-        res.redirect('/home');
+        return res.redirect('/home');
     } else {
         req.session.message = {
             type:'error',
             message:'Usuário não encontrado!'
           };
-        res.redirect('/login');
+        return res.redirect('/login');
     }
     
-    next();
 }
 
 module.exports = authenticate;

@@ -43,7 +43,7 @@ app.post('/login/autenticar', authenticator);
 
 app.use('/users',authenticator, users);
 
-app.use('/articles',authenticator, articles);
+app.use('/articles', articles);
 
 app.use('/home', index);
 
