@@ -5,7 +5,16 @@ var router = express.Router();
 
 router.get("/", (_, res) => {
    const articles = ArticleModel.readArticles();
-   res.render('index', {articles: articles});
+   const mostLikedArticles =  ArticleModel.top10MostLikedArticlers();
+   res.render('index', {
+      articles: articles,
+      mostLikedArticles: mostLikedArticles 
+   });
 });
 
 module.exports = router;
+
+router.get("/admin/", (_, res) => {
+   res.redirect("/home");
+});
+

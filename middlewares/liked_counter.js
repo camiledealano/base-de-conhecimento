@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function likeCount(req, res, next) {
-    const articleId = req.params.value;
+    const articleId = req.params.id;
     const rawData = fs.readFileSync('./data/articles.json', 'utf-8');
     let articles = JSON.parse(rawData);
     

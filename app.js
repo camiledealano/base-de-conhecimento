@@ -31,7 +31,7 @@ app.use(flash());
 app.use((req,res,next) =>{
   res.locals.message = req.session.message;
   res.locals.user = req.session.user;
-  res.locals.visibility = req.session.visibility;
+
   delete req.session.message;
   next()
 });
@@ -41,11 +41,12 @@ app.get('/like-count/:value', likeCount);
 // Rotas
 app.post('/login/autenticar', authenticator);
 
-app.use('/users', users);
+app.use('/users',authenticator, users);
 
-app.use('/articles', articles);
+app.use('/articles',authenticator, articles);
 
 app.use('/home', index);
+
 
 // Renderizar páginas
 
@@ -88,6 +89,9 @@ app.get('/list-articles', (_,res) => {
 // app.get('/like-count/:value', (req,res) => {
 //   console.log(req.params.value);
 // });
+
+app.get('/like-count/:id', likeCount);
+
 
 // Porta onde roda a aplicação
 app.listen(9000, () => {
