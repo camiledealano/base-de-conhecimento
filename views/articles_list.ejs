@@ -9,7 +9,8 @@
             </a>
         </div>
      <% }; %>
-    <div class="mb-3" style="margin-left: 6%; width: 140px;">
+     <div class="container">
+    <div class="mb-4" style="margin-left: 6%; width: 140px;">
         <a href="/cadastro-artigo" class="btn btn-success d-flex align-items-center">
             <i class="material-icons mr-2">add</i>    
             Novo artigo
@@ -18,7 +19,7 @@
     <div class="list-data">
         <table class="table">
             <thead>
-                <tr>
+                <tr class="table-light">
                     <th scope="col">Id</th>
                     <th scope="col">Título</th>
                     <th scope="col">Corpo</th>
@@ -26,39 +27,38 @@
                     <th scope="col">Autor</th>
                     <th scope="col">Data de Publicação</th>
                     <th scope="col">Likes</th>
+                    <th scope="col">Ações</th>
                 </tr>
             </thead>    
             <tbody>
                 <% articles.forEach(function(a) { %>
                     <tr>
-                        <td class="td-wrap"><%= a.id %></td>
-                        <td class="td-wrap"><%= a.title %></td>
+                        <td class="max-cell"><%= a.id %></td>
+                        <td class="max-cell"><%= a.title %></td>
                         <td class="max-cell"><%= a.body %></td>
-                        <td class="td-wrap"><%= a.keywords %></td>
-                        <td class="td-wrap"><%= a.author_name %></td>
+                        <td class="max-cell"><%= a.keywords %></td>
+                        <td class="max-cell"><%= a.author_name %></td>
                         <td><%= a.published_date %></td>
-                        <td>
-                            <%= a.likes %>
-                            <div class="m-5"></div>
-                            <div class="btn-group">
-                                <a href="/articles/edit/<%= a.id %>">
-                                    <button class="btn btn-outline-primary btn-sm">
-                                        <i class="material-icons">create</i>
-                                    </button>
-                                </a>
+                        <td><%= a.likes %></td>
+                        <td class="btn-group">                 
+                            <a href="/articles/edit/<%= a.id %>">
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="material-icons">create</i>
+                                </button>
+                            </a>
                                 <div style="margin: 3px;"></div>
-                                <a href="/articles/delete/<%= a.id %>">
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        <i class="material-icons">delete</i>    
-                                    </button>
-                                </a>
-                            </div>
+                            <a href="/articles/delete/<%= a.id %>">
+                                <button class="btn btn-outline-danger btn-sm">
+                                    <i class="material-icons">delete</i>    
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 <% }); %>
             </tbody>
         </table>
     </div>
+</div>
 </main>
 
 <%- include('./partials/_footer'); -%>
