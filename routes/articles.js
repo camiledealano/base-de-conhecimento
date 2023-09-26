@@ -1,12 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const ArticleModel = require('../models/ArticleModel');
-const filePath = './data/articles.json';
-const fs = require('fs');
 
-router.post('/create', (req,res) => {
-  new ArticleModel(req.body);
-  res.redirect('/')
+router.post('/create', (req, res) => {
+  const newArticle = new ArticleModel(req.body);
+  const articles = ArticleModel.readArticles();
+  articles.push(newArticle);
+  ArticleModel.writeArticles(articles);
+
+  req.session.message = {
+    type: 'sucess',
+    message: "Artigo cadastrado com sucesso!"
+  }
+
+  res.redirect('/articles/list')
 });
 
 router.get('/delete/:id', (req,res) => {
@@ -26,12 +33,22 @@ router.get('/edit/:id', (req,res) => {
   if(article == null){
     req.session.message = {
       type:'error',
-      message:'Usuario não encontrado!'
+      message:'Artigo não encontrado!'
     };
     res.redirect('/articles/list');
   };
 
   res.render('article_edit', {article: article});
 })
+
+router.post('/edit', (req, res) => {
+  ArticleModel.update(req.body)
+  req.session.message = {
+    type: 'sucess',
+    message: 'Artigo editado com sucesso!'
+  };
+   res.redirect('/articles/list');
+})
+
 
 module.exports = router;

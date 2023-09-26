@@ -30,23 +30,23 @@
                 </tr>
             </thead>    
             <tbody>
-                <% articles.forEach(function(article) { %>
+                <% articles.forEach(function(a) { %>
                     <tr>
-                        <td class="td-wrap"><%= article.kb_id %></td>
-                        <td class="td-wrap"><%= article.kb_title %></td>
-                        <td class="td-wrap"><%= article.kb_body %></td>
-                        <td class="td-wrap"><%= article.kb_keywords %></td>
-                        <td class="td-wrap"><%= article.kb_author_email %></td>
-                        <td class="td-wrap"><%= article.kb_published_date %></td>
-                        <td><%= article.kb_liked_count %></td>
+                        <td class="td-wrap"><%= a.id %></td>
+                        <td class="td-wrap"><%= a.title %></td>
+                        <td class="td-wrap"><%= a.body %></td>
+                        <td class="td-wrap"><%= a.keywords %></td>
+                        <td class="td-wrap"><%= a.author_name %></td>
+                        <td class="td-wrap"><%= a.published_date %></td>
+                        <td><%= a.likes %></td>
                         <td class="btn-group">
-                            <a href="/articles/edit/<%= article.kb_id %>">
+                            <a href="/articles/edit/<%= a.id %>">
                                 <button class="btn btn-outline-primary btn-sm">
                                     <i class="material-icons">create</i>
                                 </button>
                             </a>
                             <div style="margin: 3px;"></div>
-                            <a href="/articles/delete/<%= article.kb_id %>">
+                            <a href="/articles/delete/<%= a.id %>">
                                 <button class="btn btn-outline-danger btn-sm">
                                     <i class="material-icons">delete</i>    
                                 </button>

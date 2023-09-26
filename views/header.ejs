@@ -16,17 +16,13 @@
           <span>BC - Base do Conhecimento</span>
       </a>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav ml-auto font-nunito-bold"> 
-            
-
-            <% if(visibility) { %>      
+          <ul class="navbar-nav ml-auto font-nunito-bold">     
                 <li class="nav-item">
                     <a class="nav-link font-nunito-bold" href="/list-articles">Artigos</a>
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link font-nunito-bold" href="/list-users">Usuários</a>
                 </li>               
-            <% }; %>    
 
             <% if(user){ %>
                 <li class="nav-item">
@@ -43,19 +39,4 @@
   </div>
 </nav>
 
-<% if (showHeaderContent) { %>
-    <header class="py-3 mb-4 border-bottom">
-      <div class="container d-flex flex-wrap justify-content-between align-items-center">
-          <div class="d-flex">
-              <a class="nav-link active me-3 font-nunito-regular-hover" href="/">Home</a>
-              <a class="nav-link me-3 font-nunito-regular-hover" href="#">Destaques</a>                                
-          </div>
-          <% if (showSearchArticle) { %>
-            <form class="col-12 col-lg-4 mb-3 mb-lg-0" role="search">
-                <input type="search" class="form-control focus-purple" placeholder="Busque um artigo pelo título" aria-label="Search">
-            </form>
-          <% } %>
-      </div>
-    </header>
-<% } %>
 

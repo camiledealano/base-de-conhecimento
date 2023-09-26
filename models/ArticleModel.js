@@ -4,15 +4,15 @@ const filePath = './data/articles.json';
 
 class ArticleModel {
     constructor(article) {
-        this.article_id = this.createArticleIdHash(article);
-        this.article_title = article.title;
-        this.article_body = article.body;
-        this.article_keywords = article.keywords;
-        this.article_liked_count = 0;
-        this.article_published = true;
-        this.article_featured = 'off';
-        this.article_author_name = article.author_name;
-        this.article_published_date = article.published_date;
+        this.id = this.createArticleIdHash(article);
+        this.title = article.title;
+        this.body = article.body;
+        this.keywords = article.keywords;
+        this.likes = 0;
+        this.published = true;
+        this.featured = 'off';
+        this.author_name = article.author_name;
+        this.published_date = article.published_date;
     }
 
     createArticleIdHash(article) {
@@ -29,24 +29,19 @@ class ArticleModel {
     };
 
     static writeArticles = (articles) => {
-      try {
-        const data = fs.writeFileSync(filePath, JSON.stringify(articles, null, 2));
-        return JSON.parse(data);
-      } catch (error) {
-        return [];
-      }
+        fs.writeFileSync(filePath, JSON.stringify(articles));
     }
 
     static findById = (id) => {
       const articles = this.readArticles();
-      const article = articles.find(a => a.article_id = id);
+      const article = articles.find(a => a.id = id);
 
       return article != null ? article : null;
     } 
 
     static deleteArticle = (id) => {
       const articles = this.readArticles();
-      const indexForDelete = articles.findIndex(a => a.kb_id == id);
+      const indexForDelete = articles.findIndex(a => a.id == id);
 
       if (indexForDelete == null) {
         return null;
@@ -54,8 +49,34 @@ class ArticleModel {
 
       articles.splice(indexForDelete, 1);
       this.writeArticles(articles);
-      
     }
+
+    static update = (articleUpd) => {
+      const articles = this.readArticles();
+      const article = articles.find(a => a.id == articleUpd.id);
+      const indexParaRemover = articles.findIndex(a => a.id == articleUpd.id);
+
+      article.id = articleUpd.id;
+      article.title = articleUpd.title;
+      article.body = articleUpd.body;
+      article.keywords = articleUpd.keywords;
+      article.likes = articleUpd.likes || 0;
+      article.published = articleUpd.published;
+      article.featured = articleUpd.featured;
+      article.author_name = articleUpd.author_name;
+      article.published_date = articleUpd.published_date;
+
+      articles.push(article);
+      articles.splice(indexParaRemover, 1);
+
+      ArticleModel.writeArticles(articles);
+    }
+
+    static top10MostLikedArticlers = () => {
+      const articles = this.readArticles();
+      articles.sort((a, b) => b.kb_liked_count - a.kb_liked_count);
+      return articles.slice(0, 10);
+    };
 }
 
 module.exports = ArticleModel;
