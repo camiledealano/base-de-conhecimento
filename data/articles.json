@@ -1,5 +1,5 @@
-
-[{"id":"3d126b30dd4bd1e0b2e4934c4c1ac3fa91959a4e",
+[
+  {"id":"3d126b30dd4bd1e0b2e4934c4c1ac3fa91959a4e",
   "title":"eu odeio frontend",
   "body":"eu odeio frontend",
   "keywords":"eu odeio frontend",
@@ -7,36 +7,17 @@
   "published":true,
   "featured":"off",
   "author_name":"camile",
-  "published_date":"26/09/2023"},
+  "published_date":"26/09/2023"
+},
   {"id":"cbb8d1bb1bcbed7d73221e1bdb8622a526b3790f",
     "title":"a incrivel vontade de sumir ",
-    "body":"Viver em um mundo cheio de desafios e responsabilidades pode, em determinados momentos, provocar uma sensação avassaladora de querer desaparecer. Essa vontade de sumir, de se retirar da realidade por um tempo, é uma experiência compartilhada por muitas pessoas em diferentes estágios da vida.\r\n\r\nA pressão da vida moderna, com suas demandas incessantes, pode ser esmagadora. As expectativas sociais, as obrigações profissionais e pessoais, juntamente com a constante exposição às notícias e à tecnologia, podem nos deixar exaustos. Nesses momentos, a mente anseia por um refúgio, por um momento de paz e tranquilidade.\r\n","keywords":"Solidão, auto-ajuda","likes":0,"published":true,"featured":"off","author_name":"Chatgpt",
-    "published_date":"hoje"},
-  {
-    "kb_id": "e97dea78f49a16f6fc4bf53645fc95c03d453f5a",
-    "kb_title": "Destaque",
-    "kb_body": "aaaa",
-    "kb_permalink": "",
-    "kb_keywords": "a",
-    "kb_liked_count": 11,
-    "kb_published": false,
-    "kb_suggestion": false,
-    "kb_featured": true,
-    "kb_author_email": "a",
-    "kb_published_date": "a"
-  },
-  {
-    "kb_id": "5c2b64733bade538451095c3a0a148284051437c",
-    "kb_title": "Sem destaque",
-    "kb_body": "aaaaasdfkfjkjfbkfjbvlkjfvbsldfkvbdklfv dfkjlvbkjfbkjfbkfjbvdfkjvblakdjfçidofnajfkbfhvbadkjdljweiorhruifbjfvfkvnsçadlkfjçjfgasdfasdf",
-    "kb_permalink": "",
-    "kb_keywords": "a",
-    "kb_liked_count": 6,
-    "kb_published": false,
-    "kb_suggestion": false,
-    "kb_featured": false,
-    "kb_author_email": "a",
-    "kb_published_date": "a"
+    "body":"Viver em um mundo cheio de desafios e responsabilidades pode, em determinados momentos, provocar uma sensação avassaladora de querer desaparecer. Essa vontade de sumir, de se retirar da realidade por um tempo, é uma experiência compartilhada por muitas pessoas em diferentes estágios da vida.\r\n\r\nA pressão da vida moderna, com suas demandas incessantes, pode ser esmagadora. As expectativas sociais, as obrigações profissionais e pessoais, juntamente com a constante exposição às notícias e à tecnologia, podem nos deixar exaustos. Nesses momentos, a mente anseia por um refúgio, por um momento de paz e tranquilidade.\r\n",
+    "keywords":"Solidão, auto-ajuda",
+    "likes":0,
+    "published":true,
+    "featured":"off",
+    "author_name":"Chatgpt",
+    "published_date":"hoje"
   }
 ]
 
