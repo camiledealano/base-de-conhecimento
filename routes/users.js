@@ -13,7 +13,7 @@ router.post('/create', (req, res) => {
   
   req.session.message = {
     type:'success',
-    message:'Usuario cadastrado com sucesso!'
+    message:'Usuário cadastrado com sucesso!'
   };
   res.redirect('/users/list');
 });
@@ -30,7 +30,7 @@ router.get('/edit/:id', (req,res) => {
   if(user == null){
     req.session.message = {
       type:'error',
-      message:'Usuario não encontrado!'
+      message:'Usuário não encontrado!'
     };
     res.redirect('/users/list');
     
@@ -43,7 +43,7 @@ router.post('/edit', (req,res) => {
   UserModel.update(req.body);
   req.session.message = {
     type:'success',
-    message:'Usuario editado com sucesso!'
+    message:'Usuário editado com sucesso!'
   };
   res.redirect('/users/list');
 });
@@ -52,7 +52,7 @@ router.get('/delete/:id', (req,res) => {
   UserModel.findByIdAndRemove(req.params.id);
   req.session.message = {
     type:'success',
-    message:'Usuario excluido com sucesso!'
+    message:'Usuário excluído com sucesso!'
   };
   res.redirect('/users/list');
   

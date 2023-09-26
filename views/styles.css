@@ -8,9 +8,9 @@ nav {
   background-color: var(--primary);
 }
 
-.font-text {
+body {
   font-weight: 400;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;;
 }
 
 .font-croissant {
@@ -66,10 +66,18 @@ nav {
   margin: auto;
 }
 
+.container-form input,
+.container-form textarea,
+.container-form select {
+  background-color: #f1ececfa;
+  border: 1px solid #b8e3f1;
+  padding: 5px;
+}
+
 .container-form h2 {
   font-weight: 600; 
   color: var(--primary); 
-  text-shadow: 1px 1px 3px rgba(64, 192, 60, 0.5);
+  text-shadow: 1px 1px 3px rgba(166, 223, 164, 0.5);
   font-weight: 600;
 }
 
@@ -210,87 +218,49 @@ color: rgba(88, 87, 87, 0.822);
 font-size: 14px;
 }
 
-.signin {
-text-align: center;
-}
-
-.signin a {
-color: royalblue;
-}
-
-.signin a:hover {
-text-decoration: underline royalblue;
-}
-
 .flex {
-display: flex;
-width: 100%;
-gap: 6px;
+  display: flex;
+  width: 100%;
+  gap: 6px;
 }
 
 .form label {
-position: relative;
+  position: relative;
 }
 
 .form label .input {
-width: 100%;
-padding: 10px 10px 20px 10px;
-outline: 0;
-border: 1px solid rgba(105, 105, 105, 0.397);
-border-radius: 10px;
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
 }
 
 .form label .input + span {
-position: absolute;
-left: 10px;
-top: 15px;
-color: grey;
-font-size: 0.9em;
-cursor: text;
-transition: 0.3s ease;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
 }
 
 .form label .input:placeholder-shown + span {
-top: 15px;
-font-size: 0.9em;
+  top: 15px;
+  font-size: 0.9em;
 }
 
 .form label .input:focus + span,.form label .input:valid + span {
-top: 30px;
-font-size: 0.7em;
-font-weight: 600;
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
 }
 
 .form label .input:valid + span {
-color: green;
+  color: green;
 }
 
-.submit {
-border: none;
-outline: none;
-background-color: royalblue;
-padding: 10px;
-border-radius: 10px;
-color: #fff;
-font-size: 16px;
-transform: .3s ease;
-}
-
-.submit:hover {
-  background-color: rgb(56, 90, 194);
-  }
-
-  @keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
 
 .td-wrap {
   max-width: 150px; 
@@ -299,6 +269,20 @@ transform: .3s ease;
 
 .list-data {
   width: 90%;
-  margin: 0 auto;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
+.form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.max-cell {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

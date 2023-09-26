@@ -18,7 +18,11 @@ router.post('/create', (req, res) => {
 
 router.get('/delete/:id', (req,res) => {
   ArticleModel.deleteArticle(req.params.id);
-  res.redirect("/visualizar-artigos");
+  req.session.message = {
+    type:'success',
+    message:'Artigo excluído com sucesso!'
+  };
+  res.redirect("/articles/list");
 });
 
 router.get('/list',  (_, res) => {
@@ -29,7 +33,7 @@ router.get('/list',  (_, res) => {
 });
 
 router.get('/edit/:id', (req,res) => {
-  var article = ArticleModel.findById(req.params.id);
+   const article = ArticleModel.findById(req.params.id);
   if(article == null){
     req.session.message = {
       type:'error',

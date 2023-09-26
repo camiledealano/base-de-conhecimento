@@ -32,9 +32,9 @@ class ArticleModel {
         fs.writeFileSync(filePath, JSON.stringify(articles));
     }
 
-    static findById = (id) => {
-      const articles = this.readArticles();
-      const article = articles.find(a => a.id = id);
+    static findById = (idArticle) => {
+      const articles = ArticleModel.readArticles();
+      const article = articles.find(a => a.id == idArticle);
 
       return article != null ? article : null;
     } 

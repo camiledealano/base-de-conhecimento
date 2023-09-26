@@ -2,11 +2,16 @@
     <title>Artigos</title>
 </head>
 
-<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
+<%- include('header'); -%>
 
-<main>
+<main class="mt-4">
     <% if(message) { %>       
-        <div class="alert alert-success"><%= message.message %></div>
+        <div class="container alert alert-success d-flex justify-content-between align-items-center" style="width: 400px;">
+            <%= message.message %>
+            <a href="" class="close" data-dismiss="alert">
+                <i class="material-icons" style="color: var(--primary);">close</i>
+            </a>
+        </div>
      <% }; %>
     <div class="mb-3" style="margin-left: 6%; width: 140px;">
         <a href="/cadastro-artigo" class="btn btn-success d-flex align-items-center">
@@ -25,8 +30,6 @@
                     <th scope="col">Autor</th>
                     <th scope="col">Data de Publicação</th>
                     <th scope="col">Likes</th>
-                    <th></th>
-                    <th></th>
                 </tr>
             </thead>    
             <tbody>
@@ -34,23 +37,26 @@
                     <tr>
                         <td class="td-wrap"><%= a.id %></td>
                         <td class="td-wrap"><%= a.title %></td>
-                        <td class="td-wrap"><%= a.body %></td>
+                        <td class="max-cell"><%= a.body %></td>
                         <td class="td-wrap"><%= a.keywords %></td>
                         <td class="td-wrap"><%= a.author_name %></td>
-                        <td class="td-wrap"><%= a.published_date %></td>
-                        <td><%= a.likes %></td>
-                        <td class="btn-group">
-                            <a href="/articles/edit/<%= a.id %>">
-                                <button class="btn btn-outline-primary btn-sm">
-                                    <i class="material-icons">create</i>
-                                </button>
-                            </a>
-                            <div style="margin: 3px;"></div>
-                            <a href="/articles/delete/<%= a.id %>">
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="material-icons">delete</i>    
-                                </button>
-                            </a>
+                        <td><%= a.published_date %></td>
+                        <td>
+                            <%= a.likes %>
+                            <div class="m-5"></div>
+                            <div class="btn-group">
+                                <a href="/articles/edit/<%= a.id %>">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="material-icons">create</i>
+                                    </button>
+                                </a>
+                                <div style="margin: 3px;"></div>
+                                <a href="/articles/delete/<%= a.id %>">
+                                    <button class="btn btn-outline-danger btn-sm">
+                                        <i class="material-icons">delete</i>    
+                                    </button>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 <% }); %>
