@@ -16,24 +16,29 @@
           <span>BC - Base do Conhecimento</span>
       </a>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav ml-auto font-nunito-bold">     
+          <ul class="navbar-nav ml-auto font-nunito-bold">    
                 <li class="nav-item">
+                    <a class="nav-link font-nunito-bold" href="/">Home</a>
+                </li>  
+            <% if(user && user.author_level == 'administrador'){ %>
+            
+                <li class="nav-item"> <!-- só aparecer quando o usuário é um admin -->
                     <a class="nav-link font-nunito-bold" href="/list-articles">Artigos</a>
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link font-nunito-bold" href="/list-users">Usuários</a>
-                </li>               
-
+                </li>  
+            <% } %>
             <% if(user){ %>
                 <li class="nav-item">
                     <a class="nav-link font-nunito-bold active" href="/logout">Sair</a>            
                 </li>
-               
+                
             <% } else{ %>  
                 <li class="nav-item">
-                    <a class="nav-link font-nunito-bold" href="/login">Login</a>        
+                    <a class="nav-link font-nunito-bold active" href="/login">Login</a>        
                 </li>
-             <% } %>           
+                <% } %>           
           </ul>
       </div>
   </div>

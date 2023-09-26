@@ -2,56 +2,53 @@
     <title>Usuários - Cadastro</title>
 </head>
 
-<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
+<%- include('header'); -%>
 
-<body class="font-text">
-    <main class="container container-form">
-        <%- include('./partials/_msg'); -%>
-        <h2 class="text-center mb-4">Cadastro de Usuário</h2>
-        <form class="row g-3" action="/users/create" method="POST" enctype="application/x-www-form-urlencoded">
-            <div class="col-md-12 row mb-3">
-                <div class="col-md-6">
-                    <label for="name">Nome</label>
-                    <input type="text" class="form-control focus-purple" id="name" name="author_name">
-                </div>
-                <div class="col-md-6">
-                    <label for="email">E-mail</label>
-                    <input type="email" class="form-control focus-purple" id="email" name="author_email">
-                </div>
+<main class="container container-form mt-5">
+    <%- include('./partials/_msg'); -%>
+    <h2 class="text-center mb-3">Cadastro de Usuário</h2>
+    <form action="/users/create" method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="col-md-12 mb-3">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control focus-purple" id="name" name="author_name">
+        </div>
+        <div class="col-md-12 row mb-3">
+            <div class="col-md-6">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control focus-purple" id="email" name="author_email">
             </div>
-            <div class="col-md-12 mb-3 row align-items-center">
-                <div class="col-md-5">
-                    <label for="nivel-acesso">Nível de Acesso</label>
-                    <select id="nivel-acesso" class="form-control focus-purple" name="author_level">
-                        <option selected>Escolher...</option>
-                        <option>Administrador</option>
-                        <option>Usuário comum</option>
-                    </select>
-                </div>
-                <div class="col-md-5 d-flex align-items-center">
-                    <span class="col-form-label" style="margin-right: 10px;">Status:</span>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input focus-purple" type="radio" name="author_status" id="gridRadios1" value="Ativo"
-                            checked>
-                        <label class="form-check-label focus-purple" for="gridRadios1">
-                            Ativo
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input focus-purple" type="radio" name="author_status" id="gridRadios2" value="Desativo">
-                        <label class="form-check-label" for="gridRadios2">
-                            Desativo
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6">
                 <label for="senha">Senha</label>
-                <input type="password" class="form-control focus-purple" id="senha" name="author_pwd">
+                <input type="password" class="form-control focus-purple" id="senha" name="author_pwd" style="width: 105%;">
             </div>
-            <div class="text-center btn-cadastrar-artigo">
-                <button type="submit" class="btn btn-success" style="width: 150px;">Salvar</button>
+        </div>
+        <div class="col-md-12 mb-3 row">
+            <div class="col-md-6">
+                <label for="nivel-acesso">Nível de Acesso</label>
+                <select id="nivel-acesso" class="form-control focus-purple" name="author_level">
+                    <option value="administrador">Administrador</option>
+                    <option value="normal" selected>Usuário comum</option>
+                </select>
             </div>
-        </form>
-    </main>
-</body>
+            <div class="col-md-6 mb-3" style="margin-top: 28px;">
+                <span class="col-sm-3" style="margin-right: 12px;">Status:</span>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input focus-purple" type="radio" name="author_status" id="gridRadios1" value="Ativo"
+                        checked>
+                    <label class="form-check-label focus-purple" for="gridRadios1">
+                        Ativo
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input focus-purple" type="radio" name="author_status" id="gridRadios2" value="Desativo">
+                    <label class="form-check-label" for="gridRadios2">
+                        Desativo
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center btn-cadastrar-artigo">
+            <button type="submit" class="btn btn-success mt-2" style="width: 150px;">Salvar</button>
+        </div>
+    </form>
+</main>

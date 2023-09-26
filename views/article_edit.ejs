@@ -2,9 +2,9 @@
     <title>Editar Artigo</title>
 </head>
 
-<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
+<%- include('header'); -%>
 
-    <main class="container container-form">
+    <main class="container container-form mt-4">
         <h2 class="text-center mb-1">Editar Artigo</h2>
         <form class="row g-3" action="/articles/edit" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="col-md-12">

@@ -4,10 +4,10 @@
     <title>Escrever Artigo</title>
 </head>
 
-<%- include('header', { showHeaderContent: true, showSearchArticle: false }); -%>
+<%- include('header'); -%>
 
-  <main class="container container-form">
-    <h2 class="text-center mb-1">Cadastre um artigo</h2>
+  <main class="container container-form mt-5">
+    <h2 class="text-center mb-2">Cadastro de Artigo</h2>
     <form class="row g-3" action="/articles/create" method="POST" enctype="application/x-www-form-urlencoded">
       <div class="col-md-12">
         <label for="title" class="form-label">Título</label>

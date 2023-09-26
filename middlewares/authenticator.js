@@ -4,12 +4,12 @@ const { use } = require('../routes/users');
 
 function authenticate(req, res, next) {
     if(req.session.user != null ){  
-        if(req.session.user.author_level === 'admin'){
+        if(req.session.user.author_level === 'administrador'){
             return next();
         }else{
             req.session.message = {
                 type:'error',
-                message:'Você precisa ser um admin!'
+                message:'Você precisa ter permissão de administrador!'
               };
               
             return res.redirect('/home');
@@ -19,7 +19,7 @@ function authenticate(req, res, next) {
     if(Object.keys(req.body).length === 0){
         req.session.message = {
             type:'error',
-            message:'Você precisa ser um admin!'
+            message:'Você precisa ter permissão de administrador!'
           };
 
         return res.redirect('/home');
@@ -33,7 +33,7 @@ function authenticate(req, res, next) {
             req.session.user = usuario;
 
             usuarioEncontrado = true;
-            if(usuario.author_level === 'admin'){
+            if(usuario.author_level === 'administrador'){
                 req.session.visibility = true;
             }
             break;
@@ -46,7 +46,7 @@ function authenticate(req, res, next) {
     } else {
         req.session.message = {
             type:'error',
-            message:'Usuario não encontrado!'
+            message:'Usuário não encontrado!'
           };
         res.redirect('/login');
     }
