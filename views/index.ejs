@@ -1,5 +1,37 @@
 <%- include('./partials/_header'); -%>
 
+  <% function generateArticleCard(article) { %>
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">
+              <%= article.title %>
+            </h5>
+            <p class="card-text"> <%=  article.body.split('.')[0] %>...</p>
+            <figcaption class="blockquote-footer mb-0 text-body-secondary">
+              Escrito por <cite title="Source Title"><%= article.author_name %></cite>
+            </figcaption>
+            <p class="card-text">
+              <small class="text-body-tertiary">
+                <%= article.published_date %>
+              </small>
+            </p>
+            <small class="text-body-tertiary">
+              <span class="material-icons" style="margin-right: 2px;">
+                favorite
+              </span>
+              <p style="margin-right: 2px;">
+                <%= article.likes %> 
+              </p>       
+            </small>
+            <a href="/articles/detail/<%= article.id %>" class="link-secondary">
+              Saiba mais..
+            </a>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
   <% if(user) { %>   
   <div class="d-flex justify-content-center align-items-center mt-5">
     <h2 class="welcome">Olá, <%= user.author_user %>!</h2>
@@ -11,38 +43,8 @@
     <div class="card mb-4">
       <h4 class="card-header text-center mb-4">Destaques</h4>
       <% articles.forEach(function(article) { %>
-        <% if(article.kb_featured == true) { %>       
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <%= article.kb_title %>
-                </h5>
-                <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-                <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                  Someone famous in <cite title="Source Title">Source Title</cite>
-                </figcaption>
-                <p class="card-text">
-                  <small class="text-body-tertiary">
-                    <%= article.kb_author_email %>
-                  </small><br>
-                  <small class="text-body-tertiary">
-                    <%= article.kb_published_date %>
-                  </small>
-                </p>
-                  <a href="/like-count/<%= article.kb_id %>">
-                    <button type="button" class="btn btn-light">
-                      <span class="material-icons">
-                        favorite
-                      </span>
-                    </button>
-                  </a>
-                  <p>
-                    <%= article.kb_liked_count %>
-                  </p>
-                </div>
-            </div>
-          </div>
+        <% if(article.featured === 'on') { %>       
+            <%= generateArticleCard(article) %>
         <% }; %>
       <% }); %>
     </div>
@@ -50,95 +52,14 @@
     <div class="card mb-4">
         <h4 class="card-header text-center mb-4">Os 10 mais curtidos</h4>
       <% mostLikedArticles.forEach(function(article) { %>
-          <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card text-center">
-              <div class="card-body">
-                <h5 class="card-title">
-                  <%= article.kb_title %>
-                </h5>
-                <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-                <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                  Someone famous in <cite title="Source Title">Source Title</cite>
-                </figcaption>
-                <p class="card-text">
-                  <small class="text-body-tertiary">
-                    <%= article.kb_author_email %>
-                  </small><br>
-                  <small class="text-body-tertiary">
-                    <%= article.kb_published_date %>
-                  </small>
-                </p>
-                  <a href="/like-count/<%= article.kb_id %>">
-                    <button type="button" class="btn btn-light">
-                      <span class="material-icons">
-                        favorite
-                      </span>
-                    </button>
-                  </a>
-                  <p>
-                    <%= article.kb_liked_count %>
-                  </p>
-              </div>
-            </div>
-          </div>
+        <%= generateArticleCard(article) %>
       <% }); %>
     </div>
     
     <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 774px;">
-            <% articles.forEach(function(article) { %>
-              <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3317%; top: 370px;">
-                <div class="card text-center">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <%= article.kb_title %>
-                    </h5>
-                    <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-                    <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                      Someone famous in <cite title="Source Title">Source Title</cite>
-                    </figcaption>
-                    <p class="card-text">
-                      <small class="text-body-tertiary">
-                        <%= article.kb_author_email %>
-                      </small><br>
-                      <small class="text-body-tertiary">
-                        <%= article.kb_published_date %>
-                      </small>
-                    </p>
-                    <% if(user){ %>
-                      <a href="/like-count/<%= article.kb_id %>">
-                        <button type="button" class="btn btn-light">
-                          <span class="material-icons">
-                            favorite
-                          </span>
-                        </button>
-                      </a>
-                      <p>
-                        <%= article.kb_liked_count %>
-                      </p>
-                      <% } else{ %>
-                        <div class="btn-group" role="group" aria-label="Terceiro grupo">
-
-                          <button type="button" class="btn btn-light disabled">
-                            <span class="material-icons">
-                              favorite
-                            </span>
-                            <p>
-                              <%= article.kb_liked_count %>
-                            </p>
-                          </button>
-
-                          <button type="button" class="btn btn-light disabled">
-                            <span class="material-icons">
-                              star
-                            </span>
-                          </button>
-                        </div>
-                        <% } %>
-
-                  </div>
-                </div>
-              </div>
-              <% }); %>
+      <% articles.forEach(function(article) { %>
+        <%= generateArticleCard(article) %>
+      <% }); %>
     </div>
   </main>
 

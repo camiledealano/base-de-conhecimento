@@ -6,9 +6,6 @@ function likeCount(req, res, next) {
     const rawData = fs.readFileSync('./data/articles.json', 'utf-8');
     let articles = JSON.parse(rawData);
     
-    // if (req.session.user == null) {
-    //     return;
-    // }
 
     articles.forEach(article => {
         if (article.id == articleId) {
