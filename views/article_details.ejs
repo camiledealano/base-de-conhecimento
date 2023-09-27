@@ -9,7 +9,7 @@
                 <h5 class="card-title"><%= article.title %></h5>
                 <p class="card-text"><%= article.body %></p>
                 <div class="d-flex justify-content-center mb-3">
-                    <a href="/like-count/<%= article.id %>">
+                    <a href="/like-count/<%= article.id %>" style="margin-right: 5px;">
                         <button type="button" class="btn btn-danger">
                             <div class="d-flex align-items-center">
                                 <span class="material-icons" style="margin-right: 7px;">favorite</span>
@@ -17,16 +17,13 @@
                             </div>
                         </button>
                     </a>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a href="/articles/favoriteById/<%= article.id %>">
-                        <button type="button" class="btn btn-warning <%= article.featured == "off" ? "disabled" : "" %>">
-                            <div class="d-flex align-items-center">
-                                <span class="material-icons ">grade</span>
-                                <%= article.featured %>
-                            </div>
-                        </button>
+                    <% if(article.featured === 'on') { %>       
+                    <a class="btn btn-warning" style="cursor: default; pointer-events: none;">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons" style="color: white;">grade</span>
+                        </div>
                     </a>
+                    <% }; %>
                 </div>
             </div>
         </div>

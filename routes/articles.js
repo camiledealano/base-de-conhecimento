@@ -67,10 +67,4 @@ router.get('/detail/:id', (req,res) => {
   res.render('article_details', {article: article});
 })
 
-router.get('/favoriteById/:id', (req,res) => {
-  ArticleModel.favoriteById(req.params.id);
-  return res.redirect(req.header('Referer') || '/');
-})
-
-
 module.exports = router;

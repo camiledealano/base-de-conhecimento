@@ -77,19 +77,6 @@ class ArticleModel {
       articles.sort((a, b) => b.kb_liked_count - a.kb_liked_count);
       return articles.slice(0, 10);
     };
-
-    static favoriteById = (id) => {
-      const articles = this.readArticles();
-      const article = articles.find(a => a.id == id);
-
-      if (article == null) {
-        return null;
-      }
-
-      article.featured = article.featured === "on" ? "off": "on";
-
-      fs.writeFileSync('./data/articles.json', JSON.stringify(articles, null, 2), 'utf-8');
-    }
 }
 
 module.exports = ArticleModel;

@@ -1,7 +1,7 @@
 <%- include('./partials/_header'); -%>
 
   <% function generateArticleCard(article) { %>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col m-3">
       <div class="card text-center">
         <div class="card-body">
             <h5 class="card-title">
@@ -16,14 +16,12 @@
                 Publicado em <%= article.published_date %>
               </small>
             </p>
-            <small class="text-body-tertiary">
-              <span class="material-icons" style="margin-right: 2px;">
-                favorite
-              </span>
-              <p style="margin-right: 2px;">
-                <%= article.likes %> 
-              </p>       
-            </small>
+            <button type="button" class="btn btn-danger mb-3">
+              <div class="d-flex align-items-center">
+                  <span class="material-icons" style="margin-right: 7px;">favorite</span>
+                  <p class="mb-0"><%= article.likes %></p>
+              </div>
+            </button>
             <a href="/articles/detail/<%= article.id %>" class="link-secondary">
               <p style="color: var(--primary);">Saiba mais..</p>
             </a>
@@ -42,18 +40,22 @@
     <%- include('./partials/_msg'); -%>
     <div class="card mb-4">
       <h4 class="card-header text-center mb-4">Destaques</h4>
-      <% articles.forEach(function(article) { %>
-        <% if(article.featured === 'on') { %>       
-            <%= generateArticleCard(article) %>
-        <% }; %>
-      <% }); %>
+      <div class="row">
+        <% articles.forEach(function(article) { %>
+          <% if(article.featured === 'on') { %>       
+              <%= generateArticleCard(article) %>
+          <% }; %>
+        <% }); %>
+      </div>
     </div>
 
     <div class="card mb-4">
         <h4 class="card-header text-center mb-4">Os 10 mais curtidos</h4>
-      <% mostLikedArticles.forEach(function(article) { %>
-        <%= generateArticleCard(article) %>
-      <% }); %>
+        <div class="row">
+          <% mostLikedArticles.forEach(function(article) { %>
+            <%= generateArticleCard(article) %>
+          <% }); %>
+        </div>
     </div>
     
     <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 774px;">
