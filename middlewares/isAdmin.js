@@ -16,7 +16,7 @@ function isAdmin(req, res, next) {
             return res.redirect('/home');
         }
     } 
-    next();
+    return next();
 }
 
 module.exports = isAdmin;
