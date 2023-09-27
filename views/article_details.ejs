@@ -18,6 +18,16 @@
                         </button>
                     </a>
                 </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <a href="/articles/favoriteById/<%= article.id %>">
+                        <button type="button" class="btn btn-warning <%= article.featured == "off" ? "disabled" : "" %>">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons ">grade</span>
+                                <%= article.featured %>
+                            </div>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="text-left" style="margin-left: 13px;">

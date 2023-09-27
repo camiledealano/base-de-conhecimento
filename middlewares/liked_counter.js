@@ -21,9 +21,7 @@ function likeCount(req, res, next) {
     })
 
     fs.writeFileSync('./data/articles.json', JSON.stringify(articles, null, 2), 'utf-8');
-    res.redirect('/articles/detail/' + articleId);
-
-    next();
+    return res.redirect(req.header('Referer') || '/');
 }
 
 module.exports = likeCount;
