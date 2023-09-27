@@ -50,12 +50,7 @@ app.use('/home', index);
 
 // Renderizar páginas
 
-app.get('/visualizar-artigos', (_, res) => {
-  let artigos = JSON.parse(fs.readFileSync("./data/articles.json", 'utf-8'));
-  res.render('articles_list', {artigos});
-})
-
-app.get('/novo-usuario', (_, res) => {
+app.get('/new-user', (_, res) => {
   res.render('users_create');
 });
 
@@ -74,7 +69,7 @@ app.get('/', (_, res) => {
   res.redirect('home');
 });
 
-app.get('/cadastro-artigo', (_, res) => {
+app.get('/new-article', (_, res) => {
   res.render('article_create');
 })
 
@@ -83,8 +78,8 @@ app.get('/list-users', (_, res) => {
 })
 
 app.get('/list-articles', (_,res) => {
-  res.redirect('articles/list')
-})
+  res.redirect('articles/list');
+}) 
 
 // app.get('/like-count/:value', (req,res) => {
 //   console.log(req.params.value);

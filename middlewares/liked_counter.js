@@ -1,25 +1,25 @@
 const fs = require('fs');
 
 function likeCount(req, res, next) {
-    const articleId = req.params.id;
+    console.log(req.params.value)
+    const articleId = req.params.value;
     const rawData = fs.readFileSync('./data/articles.json', 'utf-8');
     let articles = JSON.parse(rawData);
     
-    if (req.session.user == null) {
-        return;
-    }
+    // if (req.session.user == null) {
+    //     return;
+    // }
 
     articles.forEach(article => {
-        if (article.kb_id == articleId) {
-            article.kb_liked_count += 1;
+        if (article.id == articleId) {
+            article.likes += 1;
         }
     })
 
     fs.writeFileSync('./data/articles.json', JSON.stringify(articles, null, 2), 'utf-8');
-    
-    res.redirect('/');
-    next();
+    res.redirect(req.header('Referer') || '/');
 
+    next();
 }
 
 module.exports = likeCount;

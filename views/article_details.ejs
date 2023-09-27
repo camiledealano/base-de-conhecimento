@@ -1,0 +1,31 @@
+<%- include('./partials/_header'); -%>
+
+<main class="container mb-5">
+    <div class="card mt-5">
+        <div class="text-center">
+            <div class="card-header">Artigo</div>
+            <div class="card-body">
+                <h5 class="card-title"><%= article.title %></h5>
+                <p class="card-text"><%= article.body %></p>
+                <div class="d-flex justify-content-center mb-3">
+                    <a href="/like-count/<%= article.id %>">
+                        <button type="button" class="btn btn-danger">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons" style="margin-right: 7px;">favorite</span>
+                                <p class="mb-0"><%= article.likes %></p>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-left" style="margin-left: 13px;">
+            <span class="text-body-secondary">Palavras-chave: <%= article.keywords %></span>
+        </div>
+        <div class="card-footer text-body-secondary text-center">
+            Autor: <%= article.author_name %>  <br>
+            Publicado em: <%= article.published_date %>
+        </div>
+    </div>
+</main>
+<%- include('./partials/_footer'); -%>

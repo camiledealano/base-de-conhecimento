@@ -33,7 +33,7 @@ router.get('/list',  (_, res) => {
 });
 
 router.get('/edit/:id', (req,res) => {
-   const article = ArticleModel.findById(req.params.id);
+  const article = ArticleModel.findById(req.params.id);
   if(article == null){
     req.session.message = {
       type:'error',
@@ -52,6 +52,19 @@ router.post('/edit', (req, res) => {
     message: 'Artigo editado com sucesso!'
   };
    res.redirect('/articles/list');
+})
+
+router.get('/detail/:id', (req,res) => {
+  const article = ArticleModel.findById(req.params.id);
+  if(article == null){
+    req.session.message = {
+      type:'error',
+      message:'Artigo não encontrado!'
+    };
+    res.redirect('/');
+  };
+
+  res.render('article_details', {article: article});
 })
 
 
