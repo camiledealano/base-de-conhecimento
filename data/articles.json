@@ -1,17 +1,5 @@
 [
   {
-    "id": "aba90f39f7c129496b5c552747182a37dd8e8436",
-    "title": "A descoberta",
-    "body": "Não acredite em algo simplesmente porque ouviu. Não acredite em algo simplesmente porque todos falam a respeito. Não acredite em algo simplesmente porque está escrito em seus livros religiosos. Não acredite em algo só porque seus professores e mestres dizem que é verdade. Não acredite em tradições só porque foram passadas de geração em geração. Mas, depois de muita análise e observação, se você vê que algo concorda com a razão e que conduz ao bem e benefício de todos, aceite-o e viva-o.",
-    "keywords": "Reflexão",
-    "likes": 0,
-    "published": true,
-    "featured": "off",
-    "author_name": "Desconhecido",
-    "published_date": "26/09/2023",
-    "kb_liked_count": 1
-  },
-  {
     "id": "e9afe0168c7e0ea435f619fe838a4714b68d4a7d",
     "title": "Minha amada namorada",
     "body": " Hoje é o seu aniversário e eu queria dizer que você é a paixão da minha vida. Desde que nos conhecemos, o meu amor por você só cresceu e se fortaleceu. Você é a pessoa mais fofa e carinhosa que eu já conheci. O seu afeto e cuidado comigo são tão importantes e me fazem sentir muito amado.",
@@ -40,7 +28,7 @@
     "title": "Amizade ",
     "body": "A amizade é uma relação que cresce a cada dia. Ela se fortalece pela atenção, dedicação e vontade de fazer a vida do outro melhor. É uma conexão genuína, sincera, que não cobra nada em troca. Tudo pode mudar, mas a amizade sobrevive ao tempo, à distância, aos desafios. Por isso, o tesouro mais precioso da vida é a amizade. Quem cultiva tem sempre mais doses de alegria.",
     "keywords": "Amizade",
-    "likes": 7,
+    "likes": 22,
     "published": true,
     "featured": "on",
     "author_name": "Isadora Pinto",
@@ -140,6 +128,17 @@
     "published": true,
     "featured": "off",
     "author_name": "Lorem Improta",
+    "published_date": "26/09/2023",
+    "kb_liked_count": 1
+  },
+  {
+    "id": "aba90f39f7c129496b5c552747182a37dd8e8436",
+    "title": "A descoberta",
+    "body": "Não acredite em algo simplesmente porque ouviu. Não acredite em algo simplesmente porque todos falam a respeito. Não acredite em algo simplesmente porque está escrito em seus livros religiosos. Não acredite em algo só porque seus professores e mestres dizem que é verdade. Não acredite em tradições só porque foram passadas de geração em geração. Mas, depois de muita análise e observação, se você vê que algo concorda com a razão e que conduz ao bem e benefício de todos, aceite-o e viva-o.",
+    "keywords": "Reflexão",
+    "likes": 0,
+    "featured": "on",
+    "author_name": "Desconhecido",
     "published_date": "26/09/2023",
     "kb_liked_count": 1
   }

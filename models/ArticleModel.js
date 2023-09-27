@@ -10,7 +10,7 @@ class ArticleModel {
         this.keywords = article.keywords;
         this.likes = 0;
         this.published = true;
-        this.featured = 'off';
+        this.featured = article.featured;
         this.author_name = article.author_name;
         this.published_date = article.published_date;
     }

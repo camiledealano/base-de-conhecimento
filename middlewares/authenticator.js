@@ -6,7 +6,7 @@ function authenticate(req, res, next) {
     if(req.session.user != null ){  
         if(req.session.user.author_level === 'administrador'){
             return next();
-        }else{
+        } else{
             req.session.message = {
                 type:'danger',
                 message:'Você precisa ter permissão de administrador!'
