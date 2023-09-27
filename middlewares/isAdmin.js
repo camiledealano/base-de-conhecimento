@@ -7,15 +7,13 @@ function isAdmin(req, res, next) {
         return res.redirect('/home');
     }
 
-    if(req.session.user != null ){  
-        if(!req.session.user.author_level === 'adminstrador'){
+    if(!req.session.user.author_level === 'adminstrador'){
             req.session.message = {
                 type:'danger',
                 message:'Você precisa ser um administrador!'
             };
             return res.redirect('/home');
-        }      
-    } 
+    }      
     return next();
 }
 
