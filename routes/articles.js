@@ -3,6 +3,10 @@ const router = express.Router();
 const ArticleModel = require('../models/ArticleModel');
 const validateSession = require('../middlewares/validate_session')
 
+router.get('/new', validateSession, (_, res) => {
+  res.render('article_create');
+})
+
 router.post('/create', validateSession, (req, res) => {
   const newArticle = new ArticleModel(req.body);
   const articles = ArticleModel.readArticles();

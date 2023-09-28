@@ -4,6 +4,11 @@ const router = express.Router();
 const UserModel = require('../models/UserModel'); 
 
 // Rotas
+
+router.get('/new', (_, res) => {
+  res.render('users_create');
+});
+
 router.post('/create', (req, res) => {
   const newUser = new UserModel(req.body);
   const users = UserModel.readUsers();
