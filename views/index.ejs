@@ -47,15 +47,28 @@
   <div class="container">
     <div class="row justify-content-center mt-3">
       <div class="col-8">
-        <div class="input-group">
-          <input type="search" class="form-control focus-purple" placeholder="Busque por palavras-chaves...">
-          <button class="btn btn-rounded focus-purple" type="button" style="background-color: var(--primary); color: white;">
-            <i class="material-icons">search</i>
-          </button>
-        </div>
+        <form action="" method="GET">
+          <div class="input-group">
+            <input type="search" class="form-control focus-purple" placeholder="Busque por palavras-chaves..." name="q" value="<%= query %>">
+            <button class="btn btn-rounded focus-purple" type="submit" style="background-color: var(--primary); color: white;">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+      </form>
       </div>
     </div>
   </div>
+
+  <% if(foundArticles) { %>  
+    <div class="card mb-5 mt-5 row">
+      <h4 class="card-header text-center mb-4" style="font-weight: bold;">Artigos achados</h4>
+      <div class="row">
+        <% foundArticles.forEach(function(article) { %>    
+            <%= generateArticleCard(article) %>
+        <% }); %>
+      </div>
+    </div>
+    <% }; %>
 
   <div class="card mb-5 mt-5 row">
     <h4 class="card-header text-center mb-4" style="font-weight: bold;">Destaques</h4>

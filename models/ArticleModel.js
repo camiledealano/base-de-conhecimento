@@ -25,8 +25,8 @@ class ArticleModel {
         return JSON.parse(data);
       } catch (error) {
         return [];
-      };
-    };
+      }
+    }
 
     static writeArticles = (articles) => {
         fs.writeFileSync(filePath, JSON.stringify(articles));
@@ -36,14 +36,14 @@ class ArticleModel {
       const articles = ArticleModel.readArticles();
       const article = articles.find(a => a.id == idArticle);
 
-      return article != null ? article : null;
+      return article !== undefined ? article : null;
     } 
 
     static deleteArticle = (id) => {
       const articles = this.readArticles();
       const indexForDelete = articles.findIndex(a => a.id == id);
 
-      if (indexForDelete == null) {
+      if (indexForDelete === undefined) {
         return null;
       }
 
@@ -76,7 +76,16 @@ class ArticleModel {
       const articles = this.readArticles();
       articles.sort((a, b) => b.likes - a.likes);
       return articles.slice(0, 10);
-    };
+    }
+
+    static findByKeywords = (key) => {
+      if(key === '') return;
+      
+      const articles = ArticleModel.readArticles();
+      const foundArticles = articles.filter(a => a.keywords.includes(key));
+      return foundArticles !== undefined ? foundArticles : null;
+    }
+    
 }
 
 module.exports = ArticleModel;

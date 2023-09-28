@@ -3,12 +3,17 @@ const ArticleModel = require('../models/ArticleModel');
 
 var router = express.Router();
 
-router.get("/", (_, res) => {
+router.get("/", (req, res) => {
+   console.log(req.query.q )
    const articles = ArticleModel.readArticles();
    const mostLikedArticles =  ArticleModel.top10MostLikedArticlers();
+   const foundArticles = ArticleModel.findByKeywords(req.query.q);
+
    res.render('index', {
       articles: articles,
-      mostLikedArticles: mostLikedArticles 
+      mostLikedArticles: mostLikedArticles,
+      foundArticles : foundArticles,
+      query : req.query.q 
    });
 });
 
