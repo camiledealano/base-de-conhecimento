@@ -5,9 +5,9 @@ const users = require('./routes/users');
 const articles = require('./routes/articles');
 const index = require('./routes/index')
 const authenticator = require('./middlewares/authenticator');
+const validateSession = require('./middlewares/validate_session');
 const session = require('express-session');
 const flash = require('connect-flash');
-const fs = require('fs');
 const likeCount = require('./middlewares/liked_counter');
 // Configuracoes
 const app = express();
@@ -41,7 +41,7 @@ app.get('/like-count/:value', likeCount);
 // Rotas
 app.post('/login/autenticar', authenticator);
 
-app.use('/users',authenticator, users);
+app.use('/users', validateSession, users);
 
 app.use('/articles', articles);
 
@@ -50,7 +50,7 @@ app.use('/home', index);
 
 // Renderizar páginas
 
-app.get('/new-user', (_, res) => {
+app.get('/new-user', validateSession, (_, res) => {
   res.render('users_create');
 });
 
@@ -69,21 +69,18 @@ app.get('/', (_, res) => {
   res.redirect('home');
 });
 
-app.get('/new-article', (_, res) => {
+app.get('/new-article', validateSession, (_, res) => {
   res.render('article_create');
 })
 
-app.get('/list-users', (_, res) => {
+app.get('/list-users', validateSession, (_, res) => {
   res.redirect('users/list');
 })
 
-app.get('/list-articles', (_,res) => {
+app.get('/list-articles', validateSession, (_,res) => {
   res.redirect('articles/list');
 }) 
 
-// app.get('/like-count/:value', (req,res) => {
-//   console.log(req.params.value);
-// });
 
 app.get('/like-count/:id', likeCount);
 
