@@ -74,7 +74,7 @@ class ArticleModel {
 
     static top10MostLikedArticlers = () => {
       const articles = this.readArticles();
-      articles.sort((a, b) => b.kb_liked_count - a.kb_liked_count);
+      articles.sort((a, b) => b.likes - a.likes);
       return articles.slice(0, 10);
     };
 }

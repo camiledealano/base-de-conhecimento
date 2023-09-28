@@ -41,6 +41,8 @@ router.get('/edit/:id', (req,res) => {
     };
     res.redirect('/articles/list');
   };
+  console.log(article);
+
 
   res.render('article_edit', {article: article});
 })

@@ -31,17 +31,16 @@
             <div class="col-md-6 mb-3" style="margin-top: 28px;">
               <span class="col-sm-3" style="margin-right: 12px;">Artigo destaque?</span>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input focus-purple" type="radio" name="featured" id="gridRadios1" value="on"
-                      checked>
-                  <label class="form-check-label focus-purple" for="gridRadios1">
-                      Sim
-                  </label>
+                <input class="form-check-input focus-purple" type="radio" name="featured" id="gridRadios1" value="on" <%= article.featured === 'on' ? 'checked' : '' %>>
+                <label class="form-check-label focus-purple" for="gridRadios1">
+                  Sim
+                </label>
               </div>
               <div class="form-check form-check-inline">
-                  <input class="form-check-input focus-purple" type="radio" name="featured" id="gridRadios2" value="off">
-                  <label class="form-check-label" for="gridRadios2">
-                      Não
-                  </label>
+                <input class="form-check-input focus-purple" type="radio" name="featured" id="gridRadios2" value="off" <%= article.featured === 'off' ? 'checked' : '' %>>
+                <label class="form-check-label" for="gridRadios2">
+                  Não
+                </label>
               </div>
             </div>
             <div class="text-center btn-cadastrar-artigo">

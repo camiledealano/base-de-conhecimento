@@ -1,68 +1,87 @@
 <%- include('./partials/_header'); -%>
 
-  <% function generateArticleCard(article) { %>
-    <div class="col m-3">
-      <div class="card text-center">
-        <div class="card-body">
-            <h5 class="card-title">
-              <%= article.title %>
-            </h5>
-            <p class="card-text"> <%=  article.body.split('.')[0] %>...</p>
-            <figcaption class="blockquote-footer mb-0 text-body-secondary">
-              Escrito por <cite title="Source Title"><%= article.author_name %></cite>
-            </figcaption>
-            <p class="card-text">
-              <small class="text-body-tertiary">
-                Publicado em <%= article.published_date %>
-              </small>
-            </p>
-            <button type="button" class="btn btn-danger mb-3">
-              <div class="d-flex align-items-center">
-                  <span class="material-icons" style="margin-right: 7px;">favorite</span>
-                  <p class="mb-0"><%= article.likes %></p>
-              </div>
-            </button>
-            <a href="/articles/detail/<%= article.id %>" class="link-secondary">
-              <p style="color: var(--primary);">Saiba mais..</p>
-            </a>
+<% function generateArticleCard(article) { %>
+  
+  <div class="col col-lg-4 mb-3">
+    <div class="card text-center h-100">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">
+          <%= article.title %>
+        </h5>
+        <p class="card-text flex-grow-1">
+          <%=  article.body.split('.')[0] %>...
+        </p>
+        <figcaption class="blockquote-footer mb-0 text-body-secondary">
+          Escrito por <cite title="Source Title"><%= article.author_name %></cite>
+        </figcaption>
+        <p class="card-text">
+          <small class="text-body-tertiary">
+            Publicado em <%= article.published_date %>
+          </small>
+        </p>
+        <div class="text-center">
+          <button type="button" class="btn btn-danger mb-3 disabled">
+            <div class="d-flex align-items-center">
+              <span class="material-icons" style="margin-right: 7px;">favorite</span>
+              <p class="mb-0"><%= article.likes %></p>
+            </div>
+          </button>
         </div>
+        <a href="/articles/detail/<%= article.id %>" class="link-secondary">
+          <p style="color: var(--primary);">Saiba mais..</p>
+        </a>
       </div>
     </div>
-  <% } %>
+  </div>
+<% } %>
 
-  <% if(user) { %>   
+<% if(user) { %>   
   <div class="d-flex justify-content-center align-items-center mt-5">
     <h2 class="welcome">Olá, <%= user.author_user %>!</h2>
   </div>
-  <% }; %>
+<% }; %>
 
-  <main class="container py-5" id="artigos">
-    <%- include('./partials/_msg'); -%>
-    <div class="card mb-4">
-      <h4 class="card-header text-center mb-4">Destaques</h4>
-      <div class="row">
-        <% articles.forEach(function(article) { %>
-          <% if(article.featured === 'on') { %>       
-              <%= generateArticleCard(article) %>
-          <% }; %>
-        <% }); %>
+<main class="container" id="artigos">
+  <%- include('./partials/_msg'); -%>
+
+  <div class="container">
+    <div class="row justify-content-center mt-3">
+      <div class="col-8">
+        <div class="input-group">
+          <input type="search" class="form-control focus-purple" placeholder="Busque por palavras-chaves...">
+          <button class="btn btn-rounded focus-purple" type="button" style="background-color: var(--primary); color: white;">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="card mb-4">
-        <h4 class="card-header text-center mb-4">Os 10 mais curtidos</h4>
-        <div class="row">
-          <% mostLikedArticles.forEach(function(article) { %>
-            <%= generateArticleCard(article) %>
-          <% }); %>
-        </div>
-    </div>
-    
-    <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 774px;">
+  <div class="card mb-5 mt-5 row">
+    <h4 class="card-header text-center mb-4" style="font-weight: bold;">Destaques</h4>
+    <div class="row">
       <% articles.forEach(function(article) { %>
+        <% if(article.featured === 'on') { %>       
+          <%= generateArticleCard(article) %>
+        <% }; %>
+      <% }); %>
+    </div>
+  </div>
+
+  <div class="card mb-4 row">
+    <h4 class="card-header text-center mb-4" style="font-weight: bold;">Os 10 mais curtidos</h4>
+    <div class="row">
+      <% mostLikedArticles.forEach(function(article) { %>
         <%= generateArticleCard(article) %>
       <% }); %>
     </div>
-  </main>
+  </div>
+
+  <div class="row">
+    <% articles.forEach(function(article) { %>
+      <%= generateArticleCard(article) %>
+    <% }); %>
+  </div>
+</main>
 
 <%- include('./partials/_footer'); -%>
