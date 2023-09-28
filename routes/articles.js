@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const ArticleModel = require('../models/ArticleModel');
+const validateSession = require('../middlewares/validate_session')
 
-router.post('/create', (req, res) => {
+router.post('/create', validateSession, (req, res) => {
   const newArticle = new ArticleModel(req.body);
   const articles = ArticleModel.readArticles();
   articles.push(newArticle);
@@ -16,7 +17,7 @@ router.post('/create', (req, res) => {
   res.redirect('/articles/list')
 });
 
-router.get('/delete/:id', (req,res) => {
+router.get('/delete/:id', validateSession, (req,res) => {
   ArticleModel.deleteArticle(req.params.id);
   req.session.message = {
     type:'success',
@@ -25,14 +26,14 @@ router.get('/delete/:id', (req,res) => {
   res.redirect("/articles/list");
 });
 
-router.get('/list',  (_, res) => {
+router.get('/list', validateSession,  (_, res) => {
   const articles =  ArticleModel.readArticles();
   res.render('articles_list', {
     articles: articles
   });
 });
 
-router.get('/edit/:id', (req,res) => {
+router.get('/edit/:id', validateSession, (req,res) => {
   const article = ArticleModel.findById(req.params.id);
   if(article == null){
     req.session.message = {
@@ -41,13 +42,11 @@ router.get('/edit/:id', (req,res) => {
     };
     res.redirect('/articles/list');
   };
-  console.log(article);
-
 
   res.render('article_edit', {article: article});
 })
 
-router.post('/edit', (req, res) => {
+router.post('/edit', validateSession, (req, res) => {
   ArticleModel.update(req.body)
   req.session.message = {
     type: 'sucess',
