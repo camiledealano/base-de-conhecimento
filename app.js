@@ -15,7 +15,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.json());
-app.use('/controllers', express.static('./views/controllers'));
 app.use('/views', express.static('./views'));
 
 // Sessão
@@ -24,8 +23,6 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
-
-app.use(flash());
 
 //Middlewares
 app.use((req,res,next) =>{
