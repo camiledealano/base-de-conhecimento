@@ -90,10 +90,13 @@
     </div>
   </div>
 
-  <div class="row">
-    <% articles.forEach(function(article) { %>
-      <%= generateArticleCard(article) %>
-    <% }); %>
+  <div class="card mb-4 row">
+    <h4 class="card-header text-center mb-4" style="font-weight: bold;">Todos os Artigos</h4>
+    <div class="row">
+      <% articles.forEach(function(article) { %>
+        <%= generateArticleCard(article) %>
+      <% }); %>
+    </div>
   </div>
 </main>
 
