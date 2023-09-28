@@ -79,8 +79,8 @@ class ArticleModel {
     }
 
     static findByKeywords = (key) => {
-      if(key === '') return;
-      
+      if(key === '' || key === ' ') return;
+
       const articles = ArticleModel.readArticles();
       const foundArticles = articles.filter(a => a.keywords.includes(key));
       return foundArticles !== undefined ? foundArticles : null;
