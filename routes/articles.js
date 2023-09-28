@@ -41,7 +41,7 @@ router.get('/edit/:id', validateSession, (req,res) => {
   const article = ArticleModel.findById(req.params.id);
   if(article == null){
     req.session.message = {
-      type:'error',
+      type:'danger',
       message:'Artigo não encontrado!'
     };
     res.redirect('/articles/list');
@@ -63,7 +63,7 @@ router.get('/detail/:id', (req,res) => {
   const article = ArticleModel.findById(req.params.id);
   if(article == null){
     req.session.message = {
-      type:'error',
+      type:'danger',
       message:'Artigo não encontrado!'
     };
     res.redirect('/');
