@@ -4,7 +4,6 @@ const ArticleModel = require('../models/ArticleModel');
 var router = express.Router();
 
 router.get("/", (req, res) => {
-   console.log(req.query.q )
    const articles = ArticleModel.readArticles();
    const mostLikedArticles =  ArticleModel.top10MostLikedArticlers();
    const foundArticles = ArticleModel.findByKeywords(req.query.q);

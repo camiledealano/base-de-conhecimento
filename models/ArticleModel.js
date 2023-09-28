@@ -82,7 +82,7 @@ class ArticleModel {
       if(key === '' || key === ' ' || key === undefined) return;
 
       const articles = ArticleModel.readArticles();
-      const foundArticles = articles.filter(a => a.keywords.includes(key));
+      const foundArticles = articles.filter(a => a.keywords.toLowerCase().includes(key.toLowerCase()));
       return foundArticles !== undefined ? foundArticles : null;
     }
     
