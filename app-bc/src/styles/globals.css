@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap');
+
+:root {
+    --primary: #972ed9;
+}
+
+nav {
+  background-color: var(--primary);
+}
+
+body {
+  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;;
+}
+
+.font-croissant {
+  font-family: 'Croissant One', cursive;
+}
+
+.font-nunito-bold {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+}
+
+.font-nunito-bold:hover {
+  color: #ffff!important;
+}
+
+.font-nunito-regular-hover {
+  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.font-nunito-regular-hover:hover {
+  color: var(--primary);
+  font-weight: 500!important;
+}
+
+.focus-purple:focus{
+  border-color: #4636d6;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+.background-gradient {
+  background: linear-gradient(135.9deg, rgb(109, 25, 252) 16.4%, rgb(125, 31, 165) 56.1%);
+}
+
+.welcome {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.container-form input,
+.container-form textarea,
+.container-form select {
+  background-color: #f7f4f4fa;
+  border: 1px solid #ddc2f7;
+  padding: 5px;
+}
+
+.container-form h2 {
+  font-weight: 600; 
+  color: var(--primary); 
+  text-shadow: 1px 1px 3px rgba(166, 223, 164, 0.5);
+  font-weight: 600;
+}
+
+.btn-cadastrar-artigo {
+    margin-top: 2%;
+}
+
+/* login */
+
+.form {
+  background-color: #fff;
+  display: block;
+  padding: 1rem;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input, .form button {
+  outline: none;
+  border: 1px solid #e5e7eb;
+  margin: 8px 0;
+}
+
+.input-container input {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(12, 12, 12, 0.05);
+}
+
+.input-container span {
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  place-content: center;
+}
+
+.input-container span svg {
+  color: #9CA3AF;
+  width: 1rem;
+  height: 1rem;
+}
+
+.submit {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #238033;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.signup-link {
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.signup-link a {
+  text-decoration: none;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 350px;
+background-color: #fff;
+padding: 20px;
+border-radius: 20px;
+position: relative;
+}
+
+.title {
+font-size: 28px;
+color: royalblue;
+font-weight: 600;
+letter-spacing: -1px;
+position: relative;
+display: flex;
+align-items: center;
+padding-left: 30px;
+}
+
+.title::before,.title::after {
+position: absolute;
+content: "";
+height: 16px;
+width: 16px;
+border-radius: 50%;
+left: 0px;
+background-color: royalblue;
+}
+
+.title::before {
+width: 18px;
+height: 18px;
+background-color: royalblue;
+}
+
+.title::after {
+width: 18px;
+height: 18px;
+animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+color: rgba(88, 87, 87, 0.822);
+font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.td-wrap {
+  max-width: 150px; 
+  word-wrap: break-word;
+}
+
+.list-data {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.max-cell {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
