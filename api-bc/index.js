@@ -1,13 +1,15 @@
 const express = require('express');
 const { default: mongoose } = require('mongoose');
 const app = express()
+
+
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGO_URL);
+// Db Connection
 
-mongoose.connection.on('connected', () => {
-  console.log('MongoDB conectado');
-});
+const conn = require("./src/db/conn")
+
+conn();
 
 app.use(function(req, res, next){
     res.setHeader("Access-Control-Allow-Origin", "*");
